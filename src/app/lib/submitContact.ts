@@ -8,6 +8,25 @@ type ContactSubmissionPayload = {
   message: string;
 };
 
+const getContactApiCandidates = () => {
+  const fromEnv = (import.meta.env.VITE_CONTACT_API_URL || "").trim();
+  const normalized = fromEnv.replace(/\/$/, "");
+
+  if (!normalized) {
+    return ["/api/contact"];
+  }
+
+  if (/^https?:\/\//i.test(normalized)) {
+    return [`${normalized}/api/contact`, "/api/contact"];
+  }
+
+  if (normalized.endsWith("/api/contact")) {
+    return [normalized, "/api/contact"];
+  }
+
+  return [`${normalized}/api/contact`, "/api/contact"];
+};
+
 const submitToNetlify = async (payload: ContactSubmissionPayload) => {
   const formBody = new URLSearchParams({
     "form-name": "contact",
@@ -33,19 +52,25 @@ const submitToNetlify = async (payload: ContactSubmissionPayload) => {
 };
 
 export const submitContact = async (payload: ContactSubmissionPayload) => {
-  try {
-    const response = await fetch("/api/contact", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify(payload),
-    });
+  const endpoints = getContactApiCandidates();
 
-    if (!response.ok) {
-      throw new Error("Vercel function submission failed.");
+  for (const endpoint of endpoints) {
+    try {
+      const response = await fetch(endpoint, {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(payload),
+      });
+
+      if (response.ok) {
+        return;
+      }
+    } catch {
+      // Try the next configured endpoint.
     }
-  } catch {
-    await submitToNetlify(payload);
   }
+
+  await submitToNetlify(payload);
 };
