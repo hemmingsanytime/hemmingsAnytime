@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { useSearchParams } from 'react-router';
 import { Phone, Mail, MapPin, Send, CheckCircle2 } from 'lucide-react';
 import { submitContact } from '@/app/lib/submitContact';
+import { ContactInformationSidebar } from '@/app/components/ContactInformationSidebar';
 
 // Draft message templates for each service
 const messageDrafts = {
@@ -143,54 +144,10 @@ export const ContactPage = () => {
         <div className="bg-white rounded-[3rem] shadow-2xl overflow-hidden border border-[#0E3A6D]/10">
           <div className="flex flex-col lg:flex-row">
             {/* Contact Information Sidebar */}
-            <div className="lg:w-2/5 bg-[#0E3A6D] p-12 text-white">
-              <h2 className="text-3xl font-bold mb-6">Contact Information</h2>
-              <p className="text-blue-100 text-lg mb-12">
-                We're here to help with all your removal, cleaning, and detailing needs. Reach out today!
-              </p>
-
-              <div className="space-y-8">
-                <div className="flex items-center gap-6">
-                  <div className="bg-white/10 p-4 rounded-2xl">
-                    <Phone className="w-6 h-6" />
-                  </div>
-                  <div>
-                    <p className="text-blue-200 text-sm font-medium uppercase tracking-wider">Call Us</p>
-                    <p className="text-lg font-bold">07557 460940</p>
-                    <p className="text-lg font-bold">07445 145540</p>
-                    <p className="text-lg font-bold">07429 312968</p>
-                  </div>
-                </div>
-                
-                <div className="flex items-center gap-6">
-                  <div className="bg-white/10 p-4 rounded-2xl">
-                    <Mail className="w-6 h-6" />
-                  </div>
-                  <div>
-                    <p className="text-blue-200 text-sm font-medium uppercase tracking-wider">Email Us</p>
-                    <p className="text-lg font-bold break-all">shavonhemmings3@gmail.com</p>
-                  </div>
-                </div>
-
-                <div className="flex items-center gap-6">
-                  <div className="bg-white/10 p-4 rounded-2xl">
-                    <MapPin className="w-6 h-6" />
-                  </div>
-                  <div>
-                    <p className="text-blue-200 text-sm font-medium uppercase tracking-wider">Service Areas</p>
-                    <p className="text-lg font-bold">Commercial & Residential</p>
-                  </div>
-                </div>
-              </div>
-
-              <div className="mt-20">
-                <p className="text-blue-200 text-sm mb-4">Available for After-Hours Services</p>
-                <div className="inline-flex items-center gap-2 px-4 py-2 bg-[#F4C430]/20 text-[#F4C430] rounded-full border border-[#F4C430]/30">
-                  <span className="w-2 h-2 bg-[#F4C430] rounded-full animate-pulse"></span>
-                  <span className="text-sm font-bold uppercase tracking-widest">Ready to Help</span>
-                </div>
-              </div>
-            </div>
+            <ContactInformationSidebar 
+              title="Contact Information"
+              description="We're here to help with all your removal, cleaning, and detailing needs. Reach out today!"
+            />
 
             {/* Contact Form */}
             <div className="lg:w-3/5 p-12 lg:p-20">

@@ -34,7 +34,7 @@ export const Footer = () => {
             </p>
             <div className="flex gap-4">
               <a 
-                href="mailto:shavonhemmings3@gmail.com" 
+                href="mailto:hemmingsanytime@gmail.com" 
                 className="w-10 h-10 rounded-lg bg-[#1E4F8A] flex items-center justify-center hover:bg-[#D62828] hover:text-white transition-all"
                 aria-label="Email Us"
               >
@@ -52,7 +52,7 @@ export const Footer = () => {
                 </svg>
               </a>
               <a 
-                href="https://wa.me/"
+                href="https://wa.me/+447557460940"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="w-10 h-10 rounded-lg bg-[#1E4F8A] flex items-center justify-center hover:bg-[#D62828] hover:text-white transition-all"
