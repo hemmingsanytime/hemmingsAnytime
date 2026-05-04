@@ -1,0 +1,6 @@
+# robots.txt for Hemmings Anytime
+User-agent: *
+Allow: /
+Sitemap: https://www.hemmingsanytime.com/sitemap.xml
+
+# Use the site URL above to ensure crawlers can discover the sitemap.
