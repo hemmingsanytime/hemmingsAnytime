@@ -50,8 +50,8 @@ export const GalleryPage = () => {
         <div className="mt-8 text-center">
           <p className="text-[#6B7280]">
             Don't have TikTok? Contact us directly at{' '}
-            <a href="mailto:shavonhemmings3@gmail.com" className="text-[#0E3A6D] font-bold hover:text-[#D62828] transition-colors">
-              shavonhemmings3@gmail.com
+            <a href="mailto:hemmingsanytime@gmail.com" className="text-[#0E3A6D] font-bold hover:text-[#D62828] transition-colors">
+              hemmingsanytime@gmail.com
             </a>
           </p>
         </div>

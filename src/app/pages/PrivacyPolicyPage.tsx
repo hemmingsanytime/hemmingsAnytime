@@ -119,7 +119,7 @@ export const PrivacyPolicyPage = () => {
             </p>
             <div className="bg-[#F7F9FC] p-6 rounded-xl mt-4 border border-[#0E3A6D]/10">
               <p className="text-[#1C1C1C] mb-2">
-                <span className="font-bold">Email:</span> shavonhemmings3@gmail.com
+                <span className="font-bold">Email:</span> hemmingsanytime@gmail.com
               </p>
               <p className="text-[#1C1C1C]">
                 <span className="font-bold">Phone:</span> 07557 460940 / 07445 145540
