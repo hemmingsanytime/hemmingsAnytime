@@ -14,6 +14,7 @@ import officeSpaceCleaningImage from "@/assets/office-space-cleaning-image.avif"
 import SofaSteamCleaningImage from "@/assets/sofa-steam-cleaning-image.avif"
 import BinSanitisationImage from "@/assets/cleaning-service-cover.avif"
 import SignCleanageImage from "@/assets/before-after-sign-cleaning-image.avif";
+import PressureWashingVideoPoster from "@/assets/pressure-washing-video-thumbnail.avif";
 
 const cleaningServices = [
   {
@@ -92,6 +93,7 @@ export const CleaningPage = () => {
             playsInline
             preload="auto"
             aria-hidden="true"
+            poster={PressureWashingVideoPoster}
           >
             <source src={PressureWashingVideo} type="video/mp4" />
           </video>

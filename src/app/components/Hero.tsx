@@ -6,10 +6,11 @@ import removalHeroImage from "@/assets/removal-hero-image.avif";
 import storageHeroImage from "@/assets/storage-hero-image.avif";
 import cleaningHeroImage from "@/assets/cleaning-hero-image.avif";
 import pressureWashingVideo from "@/assets/pressure-washing-video.mp4";
+import PressureWashingVideoPoster from "@/assets/pressure-washing-video-thumbnail.avif";
 
 const backgroundMedia = [
   { type: "image", src: removalHeroImage },
-  { type: "video", src: pressureWashingVideo },
+  { type: "video", src: pressureWashingVideo, poster: PressureWashingVideoPoster },
   { type: "image", src: storageHeroImage },
   { type: "image", src: cleaningHeroImage },
 ] as const;
@@ -72,6 +73,7 @@ export const Hero = () => {
               initial={false}
               animate={{ opacity: currentImageIndex === index ? 1 : 0 }}
               transition={{ duration: 1.2, ease: "easeInOut" }}
+              poster={media.poster ?? undefined}
             >
               <source src={media.src} type="video/mp4" />
             </motion.video>
