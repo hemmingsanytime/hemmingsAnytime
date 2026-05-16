@@ -67,7 +67,7 @@ export const PrivacyPolicyPage = () => {
           <section>
             <h2 className="text-2xl font-bold text-[#1C1C1C] mb-4">5. Data Security</h2>
             <p className="text-[#6B7280] leading-relaxed">
-              We implement reasonable security measures to protect your personal information from unauthorized access, alteration, disclosure, or destruction. However, no method of transmission over the internet is 100% secure, and we cannot guarantee absolute security.
+              We implement reasonable security measures to protect your personal information from unauthorised access, alteration, disclosure, or destruction. However, no method of transmission over the internet is 100% secure, and we cannot guarantee absolute security.
             </p>
           </section>
 

@@ -30,7 +30,7 @@ export const Footer = () => {
               <img src={logo} alt="Hemmings Anytime" className="h-14 w-auto mb-8" />
             </Link>
             <p className="max-w-md text-lg leading-relaxed mb-8">
-              Specializing in professional removal, storage, cleaning, painting, marine, and aviation detailing for commercial and residential clients. Delivering peace of mind and excellence anytime you need it.
+              Specialising in professional removal, storage, cleaning, painting, marine, and aviation detailing for commercial and residential clients. Delivering peace of mind and excellence anytime you need it.
             </p>
             <div className="flex gap-4">
               <a 
@@ -62,7 +62,7 @@ export const Footer = () => {
                   <path d="M20.52 3.48A11.86 11.86 0 0 0 12.06 0C5.5 0 .15 5.33.15 11.9c0 2.1.55 4.15 1.6 5.96L0 24l6.31-1.65a11.9 11.9 0 0 0 5.74 1.46h.01c6.56 0 11.9-5.34 11.9-11.9 0-3.18-1.24-6.17-3.44-8.43zM12.06 21.8h-.01a9.9 9.9 0 0 1-5.04-1.38l-.36-.21-3.74.98 1-3.65-.24-.37a9.88 9.88 0 0 1-1.53-5.27c0-5.45 4.44-9.89 9.9-9.89 2.64 0 5.12 1.03 6.99 2.9a9.82 9.82 0 0 1 2.9 6.99c0 5.45-4.44 9.9-9.88 9.9zm5.43-7.42c-.3-.15-1.78-.88-2.06-.98-.28-.1-.48-.15-.69.15-.2.3-.79.98-.97 1.18-.18.2-.36.23-.66.08-.3-.15-1.27-.47-2.42-1.49-.89-.79-1.49-1.76-1.67-2.06-.17-.3-.02-.46.13-.61.14-.14.3-.36.45-.54.15-.18.2-.3.3-.5.1-.2.05-.38-.02-.54-.08-.15-.69-1.66-.94-2.27-.25-.6-.5-.52-.69-.53h-.58c-.2 0-.54.08-.82.38-.28.3-1.07 1.04-1.07 2.54 0 1.5 1.1 2.95 1.26 3.15.15.2 2.17 3.3 5.24 4.63.73.32 1.3.51 1.74.65.73.23 1.4.2 1.93.12.59-.09 1.78-.73 2.03-1.44.25-.7.25-1.31.18-1.44-.08-.13-.28-.2-.58-.35z"/>
                 </svg>
               </a>
-              <a 
+              {/* <a 
                 href="https://www.tiktok.com/@hemmingsanytime" 
                 target="_blank"
                 rel="noopener noreferrer"
@@ -72,7 +72,7 @@ export const Footer = () => {
                 <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
                   <path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-5.2 1.74 2.89 2.89 0 0 1 2.31-4.64 2.93 2.93 0 0 1 .88.13V9.4a6.84 6.84 0 0 0-1-.05A6.33 6.33 0 0 0 5 20.1a6.34 6.34 0 0 0 10.86-4.43v-7a8.16 8.16 0 0 0 4.77 1.52v-3.4a4.85 4.85 0 0 1-1-.1z"/>
                 </svg>
-              </a>
+              </a> */}
             </div>
           </div>
 
@@ -93,7 +93,7 @@ export const Footer = () => {
               {/* <li><Link to="/" className="hover:text-[#F4C430] transition-colors">About Us</Link></li> */}
               <li><a href="/#benefits" className="hover:text-[#F4C430] transition-colors">Why Choose Us</a></li>
               <li><Link to="/contact" className="hover:text-[#F4C430] transition-colors">Contact</Link></li>
-              <li><Link to="/gallery" className="hover:text-[#F4C430] transition-colors">Gallery</Link></li>
+              {/* <li><Link to="/ " className="hover:text-[#F4C430] transition-colors">Gallery</Link></li> */}
               <li><Link to="/privacy-policy" className="hover:text-[#F4C430] transition-colors">Privacy Policy</Link></li>
               <li><Link to="/terms-of-service" className="hover:text-[#F4C430] transition-colors">Terms of Service</Link></li>
             </ul>

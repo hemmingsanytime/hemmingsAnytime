@@ -36,7 +36,7 @@ const marineServices = [
   },
   {
     title: "Chrome Polishing",
-    description: "Specialized polishing for chrome fittings, rails, and hardware to restore brilliant shine.",
+    description: "Specialised polishing for chrome fittings, rails, and hardware to restore brilliant shine.",
     icon: <Sparkles className="w-6 h-6" />
   },
   {
@@ -171,7 +171,7 @@ export const MarineDetailingPage = () => {
       <section className="py-24 bg-[#0E3A6D] text-white">
         <div className="max-w-4xl mx-auto px-4 text-center">
           <h2 className="text-4xl font-bold mb-8">Ready to give your vessel the care it deserves?</h2>
-          <p className="text-blue-100 text-lg mb-12">Contact us today for a free consultation and personalized quote for your marine detailing needs.</p>
+          <p className="text-blue-100 text-lg mb-12">Contact us today for a free consultation and personalised quote for your marine detailing needs.</p>
           <Link 
             to="/contact?service=marine-detailing"
             className="inline-flex items-center gap-2 bg-[#D62828] text-white px-10 py-5 rounded-full font-bold hover:bg-[#B91C1C] transition-all shadow-xl group"

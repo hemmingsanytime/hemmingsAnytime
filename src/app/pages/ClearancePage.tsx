@@ -26,7 +26,7 @@ const features = [
   },
   {
     title: "End-of-Tenancy Clearance",
-    description: "Specialized waste removal and deep cleaning services designed to meet landlord and estate agent standards.",
+    description: "Specialised waste removal and deep cleaning services designed to meet landlord and estate agent standards.",
     icon: <Home className="w-6 h-6" />
   },
   {

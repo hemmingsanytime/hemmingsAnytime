@@ -114,7 +114,7 @@ export const CleaningPage = () => {
           <ServiceImageGallery items={galleryItems} />
 
           <ServiceSectionIntro
-            title="Our Specialized Cleaning Services"
+            title="Our Specialised Cleaning Services"
             description="Our experienced cleaning team uses industrial-grade disinfectants and professional equipment to ensure your environment is safe, clean, and welcoming."
           />
 
@@ -132,7 +132,7 @@ export const CleaningPage = () => {
             <div className="bg-[#F2F4FF] p-10 rounded-3xl border border-[#0E3A6D]/10 w-full lg:w-[calc(33.333%-1.5rem)]">
               <Clock className="w-10 h-10 text-[#0E3A6D] mb-6" />
               <h4 className="text-xl font-bold text-[#1C1C1C] mb-4">After-Hours Service</h4>
-              <p className="text-[#6B7280]">We offer flexible cleaning schedules including overnight and weekend shifts to minimize disruption to your business operations.</p>
+              <p className="text-[#6B7280]">We offer flexible cleaning schedules including overnight and weekend shifts to minimise disruption to your business operations.</p>
             </div>
             <div className="bg-[#F2F4FF] p-10 rounded-3xl border border-[#0E3A6D]/10 w-full lg:w-[calc(33.333%-1.5rem)]">
               <ShieldCheck className="w-10 h-10 text-[#0E3A6D] mb-6" />

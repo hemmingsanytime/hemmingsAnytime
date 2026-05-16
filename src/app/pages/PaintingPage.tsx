@@ -16,7 +16,7 @@ import ExteriorPaintingImage from "@/assets/exterior-painting-image.avif";
 const paintingServices = [
   {
     title: "Commercial Painting",
-    description: "Revitalize your office, retail, or industrial space with high-quality, durable finishes that reflect your brand's excellence.",
+    description: "Revitalise your office, retail, or industrial space with high-quality, durable finishes that reflect your brand's excellence.",
     icon: <Building2 className="w-6 h-6" />
   },
   {
@@ -120,7 +120,7 @@ export const PaintingPage = () => {
             to="/contact?service=painting-decor"
             className="inline-flex items-center gap-2 bg-[#D62828] text-white px-10 py-5 rounded-full font-bold hover:bg-[#B91C1C] transition-all shadow-xl group"
           >
-            Get Your Personalized Quote <ArrowRight size={20} className="group-hover:translate-x-1 transition-transform" />
+            Get Your Personalised Quote <ArrowRight size={20} className="group-hover:translate-x-1 transition-transform" />
           </Link>
         </div>
       </section>

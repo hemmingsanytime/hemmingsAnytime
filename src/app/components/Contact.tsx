@@ -13,13 +13,13 @@ export const Contact = () => {
 
             <ContactInformationSidebar 
               title="Let's Get Started"
-              description="Ready for a cleaner, more organized space? Reach out today for a free, no-obligation quote."
+              description="Ready for a cleaner, more organised space? Reach out today for a free, no-obligation quote."
             />
 
             <div className="lg:w-3/5 p-12 lg:p-20 flex flex-col items-center justify-center text-center">
               <h3 className="text-3xl font-bold text-[#1C1C1C] mb-6">Get Your Free Quote</h3>
               <p className="text-lg text-[#6B7280] mb-8 max-w-xl">
-                Click below to fill out our detailed contact form and tell us about your specific needs. We'll get back to you as soon as possible with a personalized quote.
+                Click below to fill out our detailed contact form and tell us about your specific needs. We'll get back to you as soon as possible with a personalised quote.
               </p>
               <Link 
                 to="/contact"
