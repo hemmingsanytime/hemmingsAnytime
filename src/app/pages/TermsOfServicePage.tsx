@@ -106,7 +106,7 @@ export const TermsOfServicePage = () => {
           <section>
             <h2 className="text-2xl font-bold text-[#1C1C1C] mb-4">10. Intellectual Property</h2>
             <p className="text-[#6B7280] leading-relaxed">
-              All content on our website, including text, graphics, logos, and images, is the property of Hemmings Anytime and is protected by copyright laws. You may not use our content without written permission.
+            All content on this website, including text, graphics, logos, and images, is either owned by or licensed to Hemmings Anytime, or used with appropriate consideration of applicable rights. Unauthorized reproduction, distribution, or commercial use of website materials without prior written consent may be restricted by applicable intellectual property laws.
             </p>
           </section>
 
