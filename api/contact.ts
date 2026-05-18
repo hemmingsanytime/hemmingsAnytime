@@ -50,7 +50,7 @@ const ownerEmailHtml = (payload: ContactPayload) => {
     <div style="background:#f6f8fb;padding:24px;font-family:Arial,sans-serif;color:#0f172a;">
       <div style="max-width:640px;margin:0 auto;background:#ffffff;border:1px solid #e2e8f0;border-radius:14px;overflow:hidden;">
         <div style="padding:20px 24px;background:#0f172a;color:#ffffff;">
-          <h1 style="margin:0;font-size:20px;line-height:1.3;">New enquiry received</h1>
+          <h1 style="margin:0;font-size:20px;line-height:1.3;">New inquiry received</h1>
           <p style="margin:8px 0 0;font-size:14px;opacity:0.9;">A contact request was submitted from ${escapeHtml(payload.source || "website")}.</p>
         </div>
         <div style="padding:20px 24px;">
@@ -78,7 +78,7 @@ const clientEmailHtml = (payload: ContactPayload) => {
     <div style="background:#f6f8fb;padding:24px;font-family:Arial,sans-serif;color:#0f172a;">
       <div style="max-width:640px;margin:0 auto;background:#ffffff;border:1px solid #e2e8f0;border-radius:14px;overflow:hidden;">
         <div style="padding:20px 24px;background:#0f172a;color:#ffffff;">
-          <h1 style="margin:0;font-size:20px;line-height:1.3;">We received your enquiry</h1>
+          <h1 style="margin:0;font-size:20px;line-height:1.3;">We received your inquiry</h1>
           <p style="margin:8px 0 0;font-size:14px;opacity:0.9;">Thanks for contacting Hemmings Anytime.</p>
         </div>
         <div style="padding:20px 24px;">
@@ -103,7 +103,7 @@ const clientTextBlock = (payload: ContactPayload) => {
   return [
     `Hi ${payload.name || "there"},`,
     "",
-    "Thanks for contacting Hemmings Anytime. We received your enquiry and will get back to you shortly.",
+    "Thanks for contacting Hemmings Anytime. We received your inquiry and will get back to you shortly.",
     "",
     `Service: ${getServiceName(payload)}`,
     `Phone: ${payload.phone || "N/A"}`,
@@ -159,7 +159,7 @@ const sendWithSmtp = async (payload: ContactPayload) => {
     from: fromEmail,
     to: toEmail,
     replyTo: payload.email,
-    subject: `New enquiry from ${payload.source || "website"}`,
+    subject: `New inquiry from ${payload.source || "website"}`,
     text: toOwnerTextBlock(payload),
     html: ownerEmailHtml(payload),
   });
@@ -167,7 +167,7 @@ const sendWithSmtp = async (payload: ContactPayload) => {
   const clientInfo = await transporter.sendMail({
     from: fromEmail,
     to: payload.email,
-    subject: "We received your enquiry - Hemmings Anytime",
+    subject: "We received your inquiry - Hemmings Anytime",
     text: clientTextBlock(payload),
     html: clientEmailHtml(payload),
   });
