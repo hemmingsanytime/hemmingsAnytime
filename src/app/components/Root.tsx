@@ -8,6 +8,16 @@ import { SeoUpdater } from './SeoUpdater';
 export const Root = () => {
   const { pathname, hash } = useLocation();
 
+  // Push virtual pageview to GTM dataLayer on every route change
+  useEffect(() => {
+    window.dataLayer = window.dataLayer || [];
+    window.dataLayer.push({
+      event: 'virtualPageview',
+      pagePath: pathname,
+      pageTitle: document.title,
+    });
+  }, [pathname]);
+
   // Scroll to top on route change, or scroll to hash target
   useEffect(() => {
     if (hash) {
