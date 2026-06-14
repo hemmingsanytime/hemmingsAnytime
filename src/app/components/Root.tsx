@@ -8,7 +8,7 @@ import { SeoUpdater } from './SeoUpdater';
 export const Root = () => {
   const { pathname, hash } = useLocation();
 
-  // Push virtual pageview to GTM dataLayer on every route change
+  // Push virtual pageview to GTM dataLayer and send gtag page_view on every route change
   useEffect(() => {
     window.dataLayer = window.dataLayer || [];
     window.dataLayer.push({
@@ -16,6 +16,14 @@ export const Root = () => {
       pagePath: pathname,
       pageTitle: document.title,
     });
+
+    // Send page_view to Google Analytics (gtag.js) on every route change
+    if (typeof window.gtag === 'function') {
+      window.gtag('config', 'G-4BCYGN2HDB', {
+        page_path: pathname,
+        page_title: document.title,
+      });
+    }
   }, [pathname]);
 
   // Scroll to top on route change, or scroll to hash target
