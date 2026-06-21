@@ -4,6 +4,7 @@ import { ChevronLeft, ChevronRight } from 'lucide-react';
 import SofaSteamCleaningImage from "@/assets/sofa-steam-cleaning-image.avif";
 import OfficeSpaceRemovalImage from "@/assets/office-space-removal-image.avif";
 import MovingAndRelocationImage from "@/assets/moving-and-relocation-image.avif";
+import RemovalHeroImage from "@/assets/removal-hero-image.avif";
 import StorageImage from "@/assets/storage-image.avif"
 import ModernPaintingImage from "@/assets/modern-painting-image.avif";
 import HullCleaningImage from "@/assets/hull-cleaning-image.avif";
@@ -43,6 +44,12 @@ const slides: Slide[] = [
     label: "Packing Services",
     alt: "Professional Packing Services",
     imageClassName: "object-[0%_15%]",
+  },
+  {
+    image: RemovalHeroImage,
+    label: "Removal Services",
+    alt: "Professional Removal Services",
+    imageClassName: "object-center",
   },
   {
     image: IndustrialCleaningImage,

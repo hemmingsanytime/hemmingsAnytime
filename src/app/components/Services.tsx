@@ -2,7 +2,7 @@ import React from 'react';
 import { motion } from 'motion/react';
 import { Link } from 'react-router';
 import {
-  Truck, Sparkles, Paintbrush, Anchor, Plane,
+  Truck, Sparkles, Paintbrush, Anchor, Plane, Warehouse,
   ChevronRight, ArrowRight
 } from 'lucide-react';
 
@@ -11,6 +11,8 @@ import cleaningServiceImage from "@/assets/cleaning-service-cover.avif";
 import paintingAndDecorServiceImage from "@/assets/painting-and-decor-service-cover.avif";
 import marineDetailingServiceImage from "@/assets/marine-detailing-service-cover.avif";
 import aviationDetailingServiceImage from "@/assets/aviation-detailing-service-cover.avif";
+import removalServiceImage from "@/assets/removal-hero-image.avif";
+import storageServiceImage from "@/assets/storage-hero-image.avif";
 
 const services = [
   {
@@ -27,6 +29,36 @@ const services = [
       "Immediate drop-off and pickup carriage",
     ],
     link: "/clearance",
+  },
+  {
+    image: removalServiceImage,
+    alt: "Removal Services",
+    title: "Removal",
+    CategoryIcon: Truck,
+    items: [
+      "Full house & office relocations",
+      "Single item pickup & delivery",
+      "Furniture & appliance fitting",
+      "Same-day priority transport",
+      "Packing materials provided",
+      "After-hours availability",
+    ],
+    link: "/removal",
+  },
+  {
+    image: storageServiceImage,
+    alt: "Storage Services",
+    title: "Storage",
+    CategoryIcon: Warehouse,
+    items: [
+      "Short & long-term units",
+      "24/7 CCTV monitoring",
+      "Climate-controlled options",
+      "Individual unit alarms",
+      "Collection & delivery available",
+      "Fully insured",
+    ],
+    link: "/storage",
   },
   {
     image: cleaningServiceImage,

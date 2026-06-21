@@ -2,6 +2,8 @@ import { createBrowserRouter } from "react-router";
 import { Root } from "./components/Root";
 import { Home } from "./pages/Home";
 import { ClearancePage } from "./pages/ClearancePage";
+import { RemovalPage } from "./pages/RemovalPage";
+import { StoragePage } from "./pages/StoragePage";
 import { CleaningPage } from "./pages/CleaningPage";
 import { PaintingPage } from "./pages/PaintingPage";
 import { MarineDetailingPage } from "./pages/MarineDetailingPage";
@@ -25,6 +27,14 @@ export const router = createBrowserRouter([
       {
         path: "services/clearance",
         Component: ClearancePage,
+      },
+      {
+        path: "services/removal",
+        Component: RemovalPage,
+      },
+      {
+        path: "services/storage",
+        Component: StoragePage,
       },
       {
         path: "services/cleaning",

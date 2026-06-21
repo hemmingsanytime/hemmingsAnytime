@@ -3,6 +3,7 @@ import { Outlet, useLocation } from 'react-router';
 import { Navbar } from './Navbar';
 import { Footer } from './Footer';
 import { WhatsAppButton } from './WhatsAppButton';
+import { PromoBanner } from './PromoBanner';
 import { SeoUpdater } from './SeoUpdater';
 
 export const Root = () => {
@@ -17,9 +18,13 @@ export const Root = () => {
       pageTitle: document.title,
     });
 
-    // Send page_view to Google Analytics (gtag.js) on every route change
+    // Send page_view to Google Analytics & Google Ads on every route change
     if (typeof window.gtag === 'function') {
       window.gtag('config', 'G-4BCYGN2HDB', {
+        page_path: pathname,
+        page_title: document.title,
+      });
+      window.gtag('config', 'AW-18213228383', {
         page_path: pathname,
         page_title: document.title,
       });
@@ -45,8 +50,10 @@ export const Root = () => {
   return (
     <div className="min-h-screen bg-white font-sans selection:bg-blue-100 selection:text-blue-900">
       <SeoUpdater />
+      <PromoBanner />
       <Navbar />
-      <main className="pt-20">
+      {/* pt accounts for: promo banner (~40px) + navbar (80px) = ~120px */}
+      <main className="pt-[120px]">
         <Outlet />
       </main>
       <Footer />

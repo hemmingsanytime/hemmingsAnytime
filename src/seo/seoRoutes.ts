@@ -55,6 +55,28 @@ export const seoPages: SeoPage[] = [
         lastModified: "2026-05-02",
     },
     {
+        path: "/services/removal",
+        title: "Removal Services | Hemmings Anytime",
+        description:
+            "Professional removal services for homes and businesses. Full house moves, single item pickup, office relocations, and same-day priority transport.",
+        keywords: "removal services, house removals, office removal, furniture removal, man and van, moving services",
+        image: "/open-graph-hero-screenshot.png",
+        changefreq: "weekly",
+        priority: "0.8",
+        lastModified: "2026-06-21",
+    },
+    {
+        path: "/services/storage",
+        title: "Secure Storage Solutions | Hemmings Anytime",
+        description:
+            "Secure, climate-controlled storage solutions for residential and commercial clients. Short-term and long-term units with 24/7 CCTV monitoring and full insurance.",
+        keywords: "storage services, secure storage, self storage, climate controlled storage, warehouse storage, storage units",
+        image: "/open-graph-hero-screenshot.png",
+        changefreq: "weekly",
+        priority: "0.8",
+        lastModified: "2026-06-21",
+    },
+    {
         path: "/services/cleaning",
         title: "Cleaning Services | Hemmings Anytime",
         description:
