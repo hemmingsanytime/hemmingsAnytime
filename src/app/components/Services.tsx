@@ -13,7 +13,7 @@ import marineDetailingServiceImage from "@/assets/marine-detailing-service-cover
 import aviationDetailingServiceImage from "@/assets/aviation-detailing-service-cover.avif";
 import removalServiceImage from "@/assets/removal-hero-image.avif";
 import storageServiceImage from "@/assets/storage-hero-image.avif";
-import ewasteServiceImage from "@/assets/office-space-removal-image.avif";
+import ewasteServiceImage from "@/assets/waste-removal-image.avif";
 
 const services = [
   {
@@ -117,18 +117,18 @@ const services = [
   },
   {
     image: ewasteServiceImage,
-    alt: "E-Waste Removal Services",
-    title: "E-Waste Removal",
+    alt: "Waste Removal Services",
+    title: "Waste Removal",
     CategoryIcon: Recycle,
     items: [
-      "Certified e-waste partner",
-      "Secure data destruction",
-      "IT asset disposal",
-      "WEEE-compliant recycling",
-      "Residential & commercial collections",
-      "Carbon-conscious waste management",
+      "Hazardous & chemical waste",
+      "WEEE / electronic waste recycling",
+      "Construction & demolition debris",
+      "Commercial & industrial waste",
+      "House clearances",
+      "Licensed & fully compliant",
     ],
-    link: "/e-waste-removal",
+    link: "/waste-removal",
   },
 ];
 

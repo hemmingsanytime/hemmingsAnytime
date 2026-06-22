@@ -138,9 +138,9 @@ export const Footer = () => {
                 </Link>
               </li>
               <li>
-                <Link to="/services/e-waste-removal" className="text-base text-gray-300/80 hover:text-[#F4C430] transition-colors duration-200 flex items-center gap-2">
+                <Link to="/services/waste-removal" className="text-base text-gray-300/80 hover:text-[#F4C430] transition-colors duration-200 flex items-center gap-2">
                   <span className="w-1.5 h-1.5 rounded-full bg-[#F4C430]/50 flex-shrink-0" />
-                  E-Waste Removal
+                  Waste Removal
                 </Link>
               </li>
             </ul>
