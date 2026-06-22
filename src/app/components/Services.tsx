@@ -2,7 +2,7 @@ import React from 'react';
 import { motion } from 'motion/react';
 import { Link } from 'react-router';
 import {
-  Truck, Sparkles, Paintbrush, Anchor, Plane, Warehouse,
+  Truck, Sparkles, Paintbrush, Anchor, Plane, Warehouse, Recycle,
   ChevronRight, ArrowRight
 } from 'lucide-react';
 
@@ -13,6 +13,7 @@ import marineDetailingServiceImage from "@/assets/marine-detailing-service-cover
 import aviationDetailingServiceImage from "@/assets/aviation-detailing-service-cover.avif";
 import removalServiceImage from "@/assets/removal-hero-image.avif";
 import storageServiceImage from "@/assets/storage-hero-image.avif";
+import ewasteServiceImage from "@/assets/office-space-removal-image.avif";
 
 const services = [
   {
@@ -113,6 +114,21 @@ const services = [
       "Protective coating",
     ],
     link: "/aviation-detailing",
+  },
+  {
+    image: ewasteServiceImage,
+    alt: "E-Waste Removal Services",
+    title: "E-Waste Removal",
+    CategoryIcon: Recycle,
+    items: [
+      "Certified e-waste partner",
+      "Secure data destruction",
+      "IT asset disposal",
+      "WEEE-compliant recycling",
+      "Residential & commercial collections",
+      "Carbon-conscious waste management",
+    ],
+    link: "/e-waste-removal",
   },
 ];
 

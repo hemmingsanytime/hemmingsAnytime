@@ -121,6 +121,17 @@ export const seoPages: SeoPage[] = [
         lastModified: "2026-05-02",
     },
     {
+        path: "/services/e-waste-removal",
+        title: "Certified E-Waste Removal | Hemmings Anytime",
+        description:
+            "Certified e-waste removal and disposal services for businesses, institutions, and residential customers. Secure data destruction, WEEE-compliant recycling, and eco-friendly processing.",
+        keywords: "e-waste removal, electronic waste disposal, WEEE recycling, data destruction, IT asset disposal, e-waste collection, certified e-waste partner",
+        image: "/open-graph-hero-screenshot.png",
+        changefreq: "weekly",
+        priority: "0.8",
+        lastModified: "2026-06-22",
+    },
+    {
         path: "/contact",
         title: "Contact Hemmings Anytime | Get a Free Quote",
         description:

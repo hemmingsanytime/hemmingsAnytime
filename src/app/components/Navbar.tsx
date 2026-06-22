@@ -63,6 +63,7 @@ export const Navbar = () => {
                 <Link to="/services/painting-decor" className="block px-6 py-2 text-[#6B7280] hover:bg-[#F2F4FF] hover:text-[#0E3A6D] transition-colors">Painting & Decor</Link>
                 <Link to="/services/marine-detailing" className="block px-6 py-2 text-[#6B7280] hover:bg-[#F2F4FF] hover:text-[#0E3A6D] transition-colors">Marine Detailing</Link>
                 <Link to="/services/aviation-detailing" className="block px-6 py-2 text-[#6B7280] hover:bg-[#F2F4FF] hover:text-[#0E3A6D] transition-colors">Aviation Detailing</Link>
+                <Link to="/services/e-waste-removal" className="block px-6 py-2 text-[#6B7280] hover:bg-[#F2F4FF] hover:text-[#0E3A6D] transition-colors">E-Waste Removal</Link>
               </div>
             </div>
 
@@ -167,6 +168,7 @@ export const Navbar = () => {
                 <Link to="/services/painting-decor" onClick={() => setIsMenuOpen(false)} className="block px-6 py-3 text-[#6B7280] hover:bg-[#F2F4FF] rounded-lg">Painting & Decor</Link>
                 <Link to="/services/marine-detailing" onClick={() => setIsMenuOpen(false)} className="block px-6 py-3 text-[#6B7280] hover:bg-[#F2F4FF] rounded-lg">Marine Detailing</Link>
                 <Link to="/services/aviation-detailing" onClick={() => setIsMenuOpen(false)} className="block px-6 py-3 text-[#6B7280] hover:bg-[#F2F4FF] rounded-lg">Aviation Detailing</Link>
+                <Link to="/services/e-waste-removal" onClick={() => setIsMenuOpen(false)} className="block px-6 py-3 text-[#6B7280] hover:bg-[#F2F4FF] rounded-lg">E-Waste Removal</Link>
               </div>
             )}
 

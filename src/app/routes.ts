@@ -8,6 +8,7 @@ import { CleaningPage } from "./pages/CleaningPage";
 import { PaintingPage } from "./pages/PaintingPage";
 import { MarineDetailingPage } from "./pages/MarineDetailingPage";
 import { AviationDetailingPage } from "./pages/AviationDetailingPage";
+import { EWasteRemovalPage } from "./pages/EWasteRemovalPage";
 import { ContactPage } from "./pages/ContactPage";
 import { ReviewsPage } from "./pages/ReviewsPage";
 import { GalleryPage } from "./pages/GalleryPage";
@@ -51,6 +52,10 @@ export const router = createBrowserRouter([
       {
         path: "services/aviation-detailing",
         Component: AviationDetailingPage,
+      },
+      {
+        path: "services/e-waste-removal",
+        Component: EWasteRemovalPage,
       },
       {
         path: "contact",
