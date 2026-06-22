@@ -4,8 +4,8 @@ import {
   Recycle, CheckCircle2, Leaf, Building2, ShieldCheck,
   FlaskConical, HardHat, Monitor, Stethoscope,
   Briefcase, Construction, Sofa, TreePine,
-  Wrench, Home,
-  AlertTriangle, Factory, Package,
+  Wrench, Home, Factory,
+  HardDrive, Smartphone, Tv, Battery, Printer,
 } from 'lucide-react';
 import { ImageWithFallback } from '@/app/components/figma/ImageWithFallback';
 import { ServicePageHero } from '@/app/components/service-page/ServicePageHero';
@@ -71,6 +71,40 @@ const householdWaste = [
     title: "House Clearances",
     description: "Complete property or estate clearances managed professionally — from single rooms to full houses, we handle every item.",
     icon: <Home className="w-5 h-5" />,
+  },
+];
+
+/* ── E-Waste / Electronic Waste ── */
+const eWaste = [
+  {
+    title: "Computers, Laptops & Servers",
+    description: "Desktop PCs, laptops, servers, and all peripherals including keyboards, mice, and docking stations — with secure data destruction available.",
+    icon: <Monitor className="w-5 h-5" />,
+  },
+  {
+    title: "Hard Drives & Storage Devices",
+    description: "HDDs, SSDs, USB drives, memory cards, and NAS devices — certified data sanitisation or physical destruction before recycling.",
+    icon: <HardDrive className="w-5 h-5" />,
+  },
+  {
+    title: "Mobile Phones & Tablets",
+    description: "Smartphones, tablets, smartwatches, and portable electronics — responsibly recycled with full data wipe and WEEE-compliant processing.",
+    icon: <Smartphone className="w-5 h-5" />,
+  },
+  {
+    title: "Printers & Office Electronics",
+    description: "Printers, scanners, copiers, fax machines, routers, switches, and networking equipment collected and recycled.",
+    icon: <Printer className="w-5 h-5" />,
+  },
+  {
+    title: "TVs, Monitors & Displays",
+    description: "CRT, LCD, LED, and plasma screens of all sizes — handled with care to safely manage hazardous components like mercury and lead.",
+    icon: <Tv className="w-5 h-5" />,
+  },
+  {
+    title: "Batteries, Cables & Accessories",
+    description: "Lithium-ion batteries, power supplies, UPS units, cables, chargers, and all small electronic accessories and components.",
+    icon: <Battery className="w-5 h-5" />,
   },
 ];
 
@@ -211,7 +245,7 @@ export const WasteRemovalPage = () => {
                 Comprehensive Waste Removal Solutions
               </h2>
               <p className="text-[#6B7280] text-base sm:text-lg leading-relaxed mb-8">
-                From hazardous chemicals and construction debris to electronic waste and household clearances — we handle it all responsibly and in full compliance with environmental regulations. Our licensed team ensures every item is collected, transported, and processed through approved facilities.
+                From hazardous chemicals and construction debris to all sorts of electronic waste (such as computers, servers, mobile phones, printers, and household appliances) and household clearances — we handle it all responsibly and in full compliance with environmental regulations. Our licensed team ensures every item is collected, transported, and processed through approved facilities.
               </p>
               <Link
                 to="/contact?service=waste-removal"
@@ -296,6 +330,18 @@ export const WasteRemovalPage = () => {
               label="Household Waste (by Third Parties)"
               items={householdWaste}
               index={2}
+            />
+
+            {/* E-Waste / Electronic Waste */}
+            <WasteCategorySection
+              color="blue"
+              colorClass="bg-[#0E3A6D]"
+              bgClass="bg-blue-50/60"
+              borderClass="border-[#0E3A6D]/15"
+              iconBgClass="bg-[#0E3A6D]/10"
+              label="E-Waste / Electronic Waste (WEEE)"
+              items={eWaste}
+              index={3}
             />
           </div>
         </div>
