@@ -23,7 +23,7 @@ export const Footer = () => {
 
       {/* Main Footer Content */}
       <div className="relative z-[1] max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-16 pb-8">
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10 lg:gap-8 mb-14">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-10 lg:gap-8 mb-14">
 
           {/* Column 1 — Company Info */}
           <div className="sm:col-span-2 lg:col-span-1">
@@ -43,7 +43,7 @@ export const Footer = () => {
                 <Mail size={17} />
               </a>
               <a
-                href="https://wa.me/447557460940"
+                href="https://wa.me/message/SSL4OWYKQKHNE1"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="w-9 h-9 rounded-lg bg-white/10 flex items-center justify-center hover:bg-[#25D366] text-gray-300 hover:text-white transition-all duration-300"
@@ -141,6 +141,21 @@ export const Footer = () => {
                 <Link to="/services/waste-removal" className="text-base text-gray-300/80 hover:text-[#F4C430] transition-colors duration-200 flex items-center gap-2">
                   <span className="w-1.5 h-1.5 rounded-full bg-[#F4C430]/50 flex-shrink-0" />
                   Waste Removal
+                </Link>
+              </li>
+            </ul>
+          </div>
+
+          {/* Column 3b — Service Areas */}
+          <div>
+            <h4 className="text-white font-bold text-base mb-5 uppercase tracking-[0.15em]">
+              Service Areas
+            </h4>
+            <ul className="space-y-3.5">
+              <li>
+                <Link to="/areas/brighton" className="text-base text-gray-300/80 hover:text-[#F4C430] transition-colors duration-200 flex items-center gap-2">
+                  <span className="w-1.5 h-1.5 rounded-full bg-[#F4C430]/50 flex-shrink-0" />
+                  Brighton
                 </Link>
               </li>
             </ul>

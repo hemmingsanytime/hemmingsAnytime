@@ -14,6 +14,7 @@ import { ReviewsPage } from "./pages/ReviewsPage";
 import { GalleryPage } from "./pages/GalleryPage";
 import { PrivacyPolicyPage } from "./pages/PrivacyPolicyPage";
 import { TermsOfServicePage } from "./pages/TermsOfServicePage";
+import { BrightonPage } from "./pages/BrightonPage";
 import { NotFound } from "./pages/NotFound";
 
 export const router = createBrowserRouter([
@@ -76,6 +77,10 @@ export const router = createBrowserRouter([
       {
         path: "terms-of-service",
         Component: TermsOfServicePage,
+      },
+      {
+        path: "areas/brighton",
+        Component: BrightonPage,
       },
       {
         path: "*",

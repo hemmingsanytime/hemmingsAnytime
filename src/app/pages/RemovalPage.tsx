@@ -12,6 +12,7 @@ import officeSpaceRemovalImage from "@/assets/office-space-removal-image.avif";
 import singleItemRemovalImage from "@/assets/single-item-removal-image.avif";
 import wasteRemovalImage from "@/assets/waste-removal-image.avif";
 import movingAndRelocationImage from "@/assets/moving-and-relocation-image.avif";
+import manAndVanImage from "@/assets/man-and-van-image.png";
 
 const features = [
   {
@@ -23,6 +24,11 @@ const features = [
     title: "Single Item Removal",
     description: "No job is too small. We offer quick pickup for individual appliances, mattresses, or large furniture pieces.",
     icon: <Box className="w-6 h-6" />
+  },
+  {
+    title: "Man & Van Service",
+    description: "Flexible, cost-effective hourly hire for small moves, store collections, or student relocations. Includes a professional driver to assist with loading.",
+    icon: <Truck className="w-6 h-6" />
   },
   {
     title: "End-of-Tenancy Clearance",
@@ -62,6 +68,11 @@ const galleryItems = [
     alt: "Single item removal for large furniture",
     caption: "Single Item Removal",
   },
+  {
+    src: manAndVanImage,
+    alt: "Man and Van service loading boxes",
+    caption: "Man & Van Service",
+  },
 ];
 
 const keyFeatures = [
@@ -97,17 +108,32 @@ export const RemovalPage = () => {
         }
       />
 
-      {/* Gallery */}
-      <section className="py-24">
+      {/* Service Cards */}
+      <section className="py-20 lg:py-24 bg-[#F7F9FC]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <ServiceImageGallery items={galleryItems} />
+          <motion.div
+            initial={{ opacity: 0, y: 16 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="text-center mb-16"
+          >
+            <div className="w-12 h-1.5 bg-[#F4C430] rounded-full mb-6 mx-auto" />
+            <h2 className="text-3xl lg:text-4xl font-extrabold text-[#1C1C1C] mb-4">Our Removal Services</h2>
+            <p className="text-[#6B7280] max-w-2xl mx-auto text-lg">Everything you need for a seamless, stress-free move.</p>
+          </motion.div>
+
+          <ServiceCardsGrid
+            items={features}
+            wrapperClassName="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8"
+            cardClassName="p-8 rounded-2xl border border-[#0E3A6D]/5 bg-white shadow-md hover:-translate-y-1.5 hover:shadow-xl hover:border-[#0E3A6D]/20 transition-all duration-300 group flex flex-col h-full"
+          />
         </div>
       </section>
 
       {/* Why Choose Us — Split Layout */}
-      <section className="py-20 bg-[#F7F9FC]">
+      <section className="py-20 lg:py-24 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex flex-col lg:flex-row gap-16 items-start">
+          <div className="flex flex-col lg:flex-row gap-12 lg:gap-16 items-start">
             {/* Left — Intro */}
             <motion.div
               initial={{ opacity: 0, x: -20 }}
@@ -117,7 +143,7 @@ export const RemovalPage = () => {
               className="w-full lg:w-5/12 lg:sticky lg:top-32"
             >
               <div className="w-12 h-1.5 bg-[#F4C430] rounded-full mb-6" />
-              <h2 className="text-4xl font-extrabold text-[#1C1C1C] mb-6 leading-tight">
+              <h2 className="text-3xl lg:text-4xl font-extrabold text-[#1C1C1C] mb-6 leading-tight">
                 Expert Removal Solutions Anytime, Anywhere
               </h2>
               <p className="text-[#6B7280] text-lg leading-relaxed mb-8">
@@ -125,15 +151,15 @@ export const RemovalPage = () => {
               </p>
               <Link
                 to="/contact?service=removal"
-                className="inline-flex items-center gap-2 bg-[#0E3A6D] text-white px-8 py-3.5 rounded-full font-bold hover:bg-[#0C2F58] transition-all shadow-lg hover:shadow-xl"
+                className="inline-flex items-center gap-2 bg-[#0E3A6D] text-white px-8 py-3.5 rounded-full font-bold hover:bg-[#0C2F58] transition-all shadow-lg hover:shadow-xl hover:-translate-y-0.5"
               >
                 Get a Free Quote
               </Link>
             </motion.div>
 
             {/* Right — Key Features Grid */}
-            <div className="w-full lg:w-7/12">
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
+            <div className="w-full lg:w-7/12 mt-8 lg:mt-0">
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 lg:gap-6">
                 {keyFeatures.map((feature, index) => (
                   <motion.div
                     key={feature}
@@ -141,12 +167,12 @@ export const RemovalPage = () => {
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true }}
                     transition={{ delay: index * 0.08, duration: 0.4 }}
-                    className="flex items-start gap-4 bg-white rounded-2xl p-6 border border-[#0E3A6D]/8 shadow-sm hover:shadow-md transition-all"
+                    className="flex items-start gap-4 bg-[#F7F9FC] rounded-2xl p-6 border border-transparent hover:border-[#0E3A6D]/10 hover:bg-white hover:shadow-md transition-all duration-300"
                   >
-                    <div className="flex-shrink-0 w-10 h-10 rounded-xl bg-[#0E3A6D]/8 flex items-center justify-center">
-                      <CheckCircle2 className="w-5 h-5 text-[#0E3A6D]" />
+                    <div className="flex-shrink-0 w-12 h-12 rounded-xl bg-white shadow-sm flex items-center justify-center">
+                      <CheckCircle2 className="w-6 h-6 text-[#0E3A6D]" />
                     </div>
-                    <span className="text-[#1C1C1C] font-semibold text-[0.95rem] leading-snug pt-2">{feature}</span>
+                    <span className="text-[#1C1C1C] font-semibold text-[1rem] leading-snug pt-3">{feature}</span>
                   </motion.div>
                 ))}
               </div>
@@ -155,8 +181,8 @@ export const RemovalPage = () => {
         </div>
       </section>
 
-      {/* Service Cards */}
-      <section className="py-24">
+      {/* Gallery */}
+      <section className="py-20 lg:py-24 bg-[#F7F9FC]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
             initial={{ opacity: 0, y: 16 }}
@@ -165,92 +191,34 @@ export const RemovalPage = () => {
             className="text-center mb-16"
           >
             <div className="w-12 h-1.5 bg-[#F4C430] rounded-full mb-6 mx-auto" />
-            <h2 className="text-3xl font-extrabold text-[#1C1C1C] mb-4">Our Removal Services</h2>
-            <p className="text-[#6B7280] max-w-2xl mx-auto text-lg">Everything you need for a seamless, stress-free move.</p>
+            <h2 className="text-3xl lg:text-4xl font-extrabold text-[#1C1C1C] mb-4">Services at a Glance</h2>
+            <p className="text-[#6B7280] max-w-2xl mx-auto text-lg">Take a closer look at the different types of removals we handle every day.</p>
           </motion.div>
-
-          <ServiceCardsGrid
-            items={features}
-            wrapperClassName="flex flex-wrap gap-8 justify-center"
-            cardClassName="p-8 rounded-2xl border border-[#0E3A6D]/10 bg-[#F7F9FC] hover:bg-white hover:shadow-xl transition-all group w-full md:w-[calc(50%-1rem)] lg:w-[calc(33.333%-1.5rem)]"
-          />
-        </div>
-      </section>
-
-      {/* Waste Removal Highlight */}
-      <section className="py-20 bg-[#F7F9FC]">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex flex-col lg:flex-row items-center gap-12">
-            <motion.div
-              initial={{ opacity: 0, scale: 0.96 }}
-              whileInView={{ opacity: 1, scale: 1 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.6 }}
-              className="relative rounded-3xl overflow-hidden group w-full lg:w-1/2 h-96"
-            >
-              <ImageWithFallback
-                src={wasteRemovalImage}
-                alt="Professional waste removal service"
-                className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-[#0E3A6D]/80 to-transparent flex items-end p-8">
-                <p className="text-white font-bold text-lg">Waste & Rubbish Removal</p>
-              </div>
-            </motion.div>
-            <motion.div
-              initial={{ opacity: 0, x: 20 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.5, delay: 0.1 }}
-              className="w-full lg:w-1/2"
-            >
-              <div className="w-12 h-1.5 bg-[#F4C430] rounded-full mb-6" />
-              <h2 className="text-3xl font-extrabold text-[#1C1C1C] mb-6">Skip the Trips to the Tip</h2>
-              <p className="text-[#6B7280] text-lg leading-relaxed mb-8">
-                We collect and remove large amounts of waste in one go, making it easy to clear out spaces quickly and efficiently. As licensed waste carriers, we ensure all disposal is handled responsibly and in compliance with environmental regulations.
-              </p>
-              <ul className="space-y-4 mb-10">
-                {["Licensed waste carriers", "Eco-friendly disposal methods", "Bulk waste collection", "Garden and construction waste"].map((item) => (
-                  <li key={item} className="flex items-center gap-3.5 text-[#1C1C1C]">
-                    <span className="w-8 h-8 rounded-lg bg-[#F4C430]/15 flex items-center justify-center flex-shrink-0">
-                      <CheckCircle2 className="w-4 h-4 text-[#0E3A6D]" />
-                    </span>
-                    <span className="font-semibold">{item}</span>
-                  </li>
-                ))}
-              </ul>
-              <Link
-                to="/contact?service=removal"
-                className="bg-[#D62828] text-white px-8 py-3.5 rounded-full font-bold hover:bg-[#B91C1C] transition-all shadow-lg hover:shadow-xl inline-block"
-              >
-                Get a Waste Removal Quote
-              </Link>
-            </motion.div>
-          </div>
+          <ServiceImageGallery items={galleryItems} />
         </div>
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 bg-[#0E3A6D]">
-        <div className="max-w-4xl mx-auto px-4 text-center">
+      <section className="py-20 lg:py-28 bg-[#0E3A6D] relative overflow-hidden">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 text-center relative z-10">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.5 }}
           >
-            <h2 className="text-3xl font-extrabold mb-6 text-white">Need Immediate Pickup or Delivery?</h2>
-            <p className="text-blue-100 mb-10 text-lg max-w-2xl mx-auto">We offer flexible logistics solutions for furniture and appliance fitting along with priority transport services.</p>
-            <div className="flex flex-wrap justify-center gap-4">
+            <h2 className="text-3xl lg:text-5xl font-extrabold mb-6 text-white leading-tight">Need Immediate Pickup or Delivery?</h2>
+            <p className="text-blue-100 mb-10 text-lg lg:text-xl max-w-2xl mx-auto">We offer flexible logistics solutions for furniture and appliance fitting along with priority transport services.</p>
+            <div className="flex flex-col sm:flex-row justify-center gap-4 lg:gap-6">
               <Link
                 to="/contact?service=removal"
-                className="bg-[#D62828] text-white px-10 py-4 rounded-full font-bold hover:bg-[#B91C1C] transition-all shadow-lg hover:shadow-xl inline-block"
+                className="bg-[#D62828] text-white px-8 lg:px-10 py-4 rounded-full font-bold hover:bg-[#B91C1C] transition-all shadow-lg hover:shadow-xl hover:-translate-y-1 w-full sm:w-auto"
               >
                 Contact Our Removal Team
               </Link>
               <Link
                 to="/services/storage"
-                className="bg-white/10 text-white px-10 py-4 rounded-full font-bold hover:bg-white/20 transition-all border border-white/20 inline-block"
+                className="bg-transparent text-white px-8 lg:px-10 py-4 rounded-full font-bold hover:bg-white/10 transition-all border-2 border-white/30 hover:border-white w-full sm:w-auto"
               >
                 View Storage Solutions
               </Link>

@@ -175,6 +175,18 @@ export const seoPages: SeoPage[] = [
         priority: "0.4",
         lastModified: "2026-05-02",
     },
+    {
+        path: "/areas/brighton",
+        title: "Brighton Removal, Cleaning & Storage Services | Hemmings Anytime",
+        description:
+            "Trusted by 230+ Brighton households. Professional removals, end-of-tenancy cleaning, secure storage, and packing services across Brighton, Hove & East Sussex. Same team, start to finish.",
+        keywords:
+            "Brighton removals, Brighton man and van, Brighton end of tenancy cleaning, Brighton storage, Brighton moving company, Hove removals, Brighton house clearance, Brighton office removals",
+        image: "/open-graph-hero-screenshot.png",
+        changefreq: "weekly",
+        priority: "0.8",
+        lastModified: "2026-06-26",
+    },
 ];
 
 export const structuredData: StructuredData = {

@@ -5,7 +5,7 @@ import { motion } from 'motion/react';
 import logo from "@/assets/logo.png";
 
 const serviceAreas = [
-  { name: 'Brighton', slug: 'brighton' },
+  { name: 'Brighton', slug: 'brighton', path: '/areas/brighton' },
   { name: 'Hastings', slug: 'hastings' },
   { name: 'Haywards Heath', slug: 'haywards-heath' },
   { name: 'Eastbourne', slug: 'eastbourne' },
@@ -13,7 +13,7 @@ const serviceAreas = [
   { name: 'Lewes', slug: 'lewes' },
   { name: 'Bexhill', slug: 'bexhill' },
   { name: 'Seaford', slug: 'seaford' },
-];
+] as const;
 
 export const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -74,17 +74,28 @@ export const Navbar = () => {
                 <ChevronDown size={15} className="transition-transform group-hover:rotate-180" />
               </button>
               <div className="absolute top-full -left-4 w-56 bg-white border border-[#0E3A6D]/10 shadow-xl rounded-2xl py-4 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200">
-                {serviceAreas.map((area) => (
-                  <a
-                    key={area.slug}
-                    href={`/#service-area-${area.slug}`}
-                    onClick={(e) => handleAnchorClick(e, `#service-area-${area.slug}`)}
-                    className="flex items-center gap-2.5 px-6 py-2.5 text-[#6B7280] hover:bg-[#F2F4FF] hover:text-[#0E3A6D] transition-colors"
-                  >
-                    <MapPin size={14} className="flex-shrink-0 text-[#D62828]" />
-                    {area.name}
-                  </a>
-                ))}
+                {serviceAreas.map((area) =>
+                  'path' in area && area.path ? (
+                    <Link
+                      key={area.slug}
+                      to={area.path}
+                      className="flex items-center gap-2.5 px-6 py-2.5 text-[#6B7280] hover:bg-[#F2F4FF] hover:text-[#0E3A6D] transition-colors"
+                    >
+                      <MapPin size={14} className="flex-shrink-0 text-[#D62828]" />
+                      {area.name}
+                    </Link>
+                  ) : (
+                    <a
+                      key={area.slug}
+                      href={`/#service-area-${area.slug}`}
+                      onClick={(e) => handleAnchorClick(e, `#service-area-${area.slug}`)}
+                      className="flex items-center gap-2.5 px-6 py-2.5 text-[#6B7280] hover:bg-[#F2F4FF] hover:text-[#0E3A6D] transition-colors"
+                    >
+                      <MapPin size={14} className="flex-shrink-0 text-[#D62828]" />
+                      {area.name}
+                    </a>
+                  )
+                )}
               </div>
             </div>
 
@@ -182,17 +193,29 @@ export const Navbar = () => {
             </button>
             {isMobileAreasOpen && (
               <div className="space-y-1">
-                {serviceAreas.map((area) => (
-                  <a
-                    key={area.slug}
-                    href={`/#service-area-${area.slug}`}
-                    onClick={(e) => handleAnchorClick(e, `#service-area-${area.slug}`)}
-                    className="flex items-center gap-2.5 px-6 py-3 text-[#6B7280] hover:bg-[#F2F4FF] rounded-lg"
-                  >
-                    <MapPin size={14} className="text-[#D62828]" />
-                    {area.name}
-                  </a>
-                ))}
+                {serviceAreas.map((area) =>
+                  'path' in area && area.path ? (
+                    <Link
+                      key={area.slug}
+                      to={area.path}
+                      onClick={() => setIsMenuOpen(false)}
+                      className="flex items-center gap-2.5 px-6 py-3 text-[#6B7280] hover:bg-[#F2F4FF] rounded-lg"
+                    >
+                      <MapPin size={14} className="text-[#D62828]" />
+                      {area.name}
+                    </Link>
+                  ) : (
+                    <a
+                      key={area.slug}
+                      href={`/#service-area-${area.slug}`}
+                      onClick={(e) => handleAnchorClick(e, `#service-area-${area.slug}`)}
+                      className="flex items-center gap-2.5 px-6 py-3 text-[#6B7280] hover:bg-[#F2F4FF] rounded-lg"
+                    >
+                      <MapPin size={14} className="text-[#D62828]" />
+                      {area.name}
+                    </a>
+                  )
+                )}
               </div>
             )}
 
