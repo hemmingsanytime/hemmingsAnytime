@@ -8,75 +8,26 @@ type ContactSubmissionPayload = {
   message: string;
 };
 
-const getContactApiCandidates = () => {
-  const fromEnv = (import.meta.env.VITE_CONTACT_API_URL || "").trim();
-  const normalized = fromEnv.replace(/\/$/, "");
-
-  if (!normalized) {
-    return ["/api/contact"];
-  }
-
-  if (/^https?:\/\//i.test(normalized)) {
-    return [`${normalized}/api/contact`, "/api/contact"];
-  }
-
-  if (normalized.endsWith("/api/contact")) {
-    return [normalized, "/api/contact"];
-  }
-
-  return [`${normalized}/api/contact`, "/api/contact"];
-};
-
-const submitToNetlify = async (payload: ContactSubmissionPayload) => {
-  const formBody = new URLSearchParams({
-    "form-name": "contact",
-    source: payload.source,
-    name: payload.name || "",
-    email: payload.email,
-    phone: payload.phone,
-    service: payload.serviceLabel || payload.service || "",
-    message: payload.message,
-  });
-
-  const response = await fetch("/", {
-    method: "POST",
-    headers: {
-      "Content-Type": "application/x-www-form-urlencoded",
-    },
-    body: formBody.toString(),
-  });
-
-  if (!response.ok) {
-    throw new Error("Netlify form submission failed.");
-  }
-};
-
+/**
+ * Submits the contact form data.
+ *
+ * The actual lead capture is handled by the GoHighLevel external tracking
+ * script (loaded in index.html). This function simply pushes a "contact_form_submit"
+ * event to the dataLayer so GTM / GHL can pick it up, then resolves successfully.
+ */
 export const submitContact = async (payload: ContactSubmissionPayload) => {
-  const endpoints = getContactApiCandidates();
+  // Push form data to dataLayer for GTM / GHL conversion tracking
+  window.dataLayer = window.dataLayer || [];
+  window.dataLayer.push({
+    event: "contact_form_submit",
+    formSource: payload.source,
+    formName: payload.name || "",
+    formEmail: payload.email,
+    formPhone: payload.phone,
+    formService: payload.serviceLabel || payload.service || "",
+    formMessage: payload.message,
+  });
 
-  for (const endpoint of endpoints) {
-    try {
-      const response = await fetch(endpoint, {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify(payload),
-      });
-
-      if (response.ok) {
-        return;
-      }
-    } catch {
-      // Try the next configured endpoint.
-    }
-  }
-
-  if (import.meta.env.DEV) {
-    console.info("Development Mode: Simulating successful contact form submission.", payload);
-    await new Promise((resolve) => setTimeout(resolve, 800));
-    return;
-  }
-
-  await submitToNetlify(payload);
+  // Small delay to let tracking scripts process the event
+  await new Promise((resolve) => setTimeout(resolve, 500));
 };
