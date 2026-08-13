@@ -131,6 +131,18 @@ export const seoPages = [
 		priority: "0.8",
 		lastModified: "2026-08-13",
 	},
+	{
+		path: "/services/removal/house-removals-east-sussex",
+		title: "House Removals East Sussex | Hemmings Anytime",
+		description:
+			"Reliable house removals East Sussex for homes, flats and furniture moves. Book trusted man and van removals with Hemmings Anytime today.",
+		keywords:
+			"House Removals East Sussex, man and van removals East Sussex, flat removals, furniture removals, house removal cost East Sussex",
+		image: "/open-graph-hero-screenshot.png",
+		changefreq: "weekly",
+		priority: "0.8",
+		lastModified: "2026-08-13",
+	},
 ];
 
 export const structuredData = {

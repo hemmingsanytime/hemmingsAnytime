@@ -75,7 +75,24 @@ export const Navbar = () => {
                   </Link>
                 </div>
 
-                <Link to="/services/removal" className="block px-6 py-2.5 text-[#6B7280] hover:bg-[#F2F4FF] hover:text-[#0E3A6D] transition-colors">Removal</Link>
+                {/* Removal Parent Link */}
+                <Link 
+                  to="/services/removal" 
+                  className="block px-6 py-2.5 font-bold text-[#0E3A6D] hover:bg-[#F2F4FF] transition-colors"
+                >
+                  Removal
+                </Link>
+                
+                {/* Child pages under Removal */}
+                <div className="my-1 py-1 bg-[#F8FAFC]">
+                  <Link 
+                    to="/services/removal/house-removals-east-sussex" 
+                    className="flex items-center gap-2 pl-10 pr-6 py-2 text-sm font-medium text-[#4B5563] hover:text-[#D62828] hover:bg-[#F1F5F9] transition-colors"
+                  >
+                    <span className="w-1.5 h-1.5 rounded-full bg-[#D62828] shrink-0" />
+                    <span>House Removals East Sussex</span>
+                  </Link>
+                </div>
                 <Link to="/services/storage" className="block px-6 py-2.5 text-[#6B7280] hover:bg-[#F2F4FF] hover:text-[#0E3A6D] transition-colors">Storage</Link>
                 <Link to="/services/cleaning" className="block px-6 py-2.5 text-[#6B7280] hover:bg-[#F2F4FF] hover:text-[#0E3A6D] transition-colors">Cleaning</Link>
                 <Link to="/services/painting-decor" className="block px-6 py-2.5 text-[#6B7280] hover:bg-[#F2F4FF] hover:text-[#0E3A6D] transition-colors">Painting & Decor</Link>
@@ -197,7 +214,13 @@ export const Navbar = () => {
                     <span>House Clearance East Sussex</span>
                   </Link>
                 </div>
-                <Link to="/services/removal" onClick={() => setIsMenuOpen(false)} className="block px-6 py-3 text-[#6B7280] hover:bg-[#F2F4FF] rounded-lg">Removal</Link>
+                <Link to="/services/removal" onClick={() => setIsMenuOpen(false)} className="block px-6 py-2.5 font-bold text-[#0E3A6D] hover:bg-[#F2F4FF] rounded-lg">Removal</Link>
+                <div className="pl-10 pr-4 py-1 space-y-1 bg-[#F8FAFC] rounded-lg border-l-2 border-[#D62828]/40 my-1">
+                  <Link to="/services/removal/house-removals-east-sussex" onClick={() => setIsMenuOpen(false)} className="flex items-center gap-2 py-1.5 text-sm font-medium text-[#4B5563] hover:text-[#D62828]">
+                    <span className="w-1.5 h-1.5 rounded-full bg-[#D62828] shrink-0" />
+                    <span>House Removals East Sussex</span>
+                  </Link>
+                </div>
                 <Link to="/services/storage" onClick={() => setIsMenuOpen(false)} className="block px-6 py-3 text-[#6B7280] hover:bg-[#F2F4FF] rounded-lg">Storage</Link>
                 <Link to="/services/cleaning" onClick={() => setIsMenuOpen(false)} className="block px-6 py-3 text-[#6B7280] hover:bg-[#F2F4FF] rounded-lg">Cleaning</Link>
                 <Link to="/services/painting-decor" onClick={() => setIsMenuOpen(false)} className="block px-6 py-3 text-[#6B7280] hover:bg-[#F2F4FF] rounded-lg">Painting & Decor</Link>
