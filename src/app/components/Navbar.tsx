@@ -57,6 +57,7 @@ export const Navbar = () => {
               </button>
               <div className="absolute top-full -left-4 w-56 bg-white border border-[#0E3A6D]/10 shadow-xl rounded-2xl py-4 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200">
                 <Link to="/services/clearance" className="block px-6 py-2 text-[#6B7280] hover:bg-[#F2F4FF] hover:text-[#0E3A6D] transition-colors">Clearance</Link>
+                <Link to="/services/house-clearance-east-sussex" className="block px-6 py-2 text-[#6B7280] hover:bg-[#F2F4FF] hover:text-[#0E3A6D] transition-colors">House Clearance East Sussex</Link>
                 <Link to="/services/removal" className="block px-6 py-2 text-[#6B7280] hover:bg-[#F2F4FF] hover:text-[#0E3A6D] transition-colors">Removal</Link>
                 <Link to="/services/storage" className="block px-6 py-2 text-[#6B7280] hover:bg-[#F2F4FF] hover:text-[#0E3A6D] transition-colors">Storage</Link>
                 <Link to="/services/cleaning" className="block px-6 py-2 text-[#6B7280] hover:bg-[#F2F4FF] hover:text-[#0E3A6D] transition-colors">Cleaning</Link>
@@ -173,6 +174,7 @@ export const Navbar = () => {
             {isMobileServicesOpen && (
               <div className="space-y-1">
                 <Link to="/services/clearance" onClick={() => setIsMenuOpen(false)} className="block px-6 py-3 text-[#6B7280] hover:bg-[#F2F4FF] rounded-lg">Clearance</Link>
+                <Link to="/services/house-clearance-east-sussex" onClick={() => setIsMenuOpen(false)} className="block px-6 py-3 text-[#6B7280] hover:bg-[#F2F4FF] rounded-lg">House Clearance East Sussex</Link>
                 <Link to="/services/removal" onClick={() => setIsMenuOpen(false)} className="block px-6 py-3 text-[#6B7280] hover:bg-[#F2F4FF] rounded-lg">Removal</Link>
                 <Link to="/services/storage" onClick={() => setIsMenuOpen(false)} className="block px-6 py-3 text-[#6B7280] hover:bg-[#F2F4FF] rounded-lg">Storage</Link>
                 <Link to="/services/cleaning" onClick={() => setIsMenuOpen(false)} className="block px-6 py-3 text-[#6B7280] hover:bg-[#F2F4FF] rounded-lg">Cleaning</Link>

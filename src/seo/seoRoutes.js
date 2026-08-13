@@ -119,6 +119,18 @@ export const seoPages = [
 		priority: "0.4",
 		lastModified: "2026-05-02",
 	},
+	{
+		path: "/services/house-clearance-east-sussex",
+		title: "House Clearance East Sussex | Hemmings Anytime",
+		description:
+			"Reliable house clearance in East Sussex for furniture, waste and unwanted items. Get professional property clearance. Contact us today.",
+		keywords:
+			"House Clearance East Sussex, property clearance East Sussex, furniture removal, end of tenancy clearance East Sussex, waste removal",
+		image: "/open-graph-hero-screenshot.png",
+		changefreq: "weekly",
+		priority: "0.8",
+		lastModified: "2026-08-13",
+	},
 ];
 
 export const structuredData = {
