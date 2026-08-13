@@ -104,7 +104,7 @@ export const Footer = () => {
               <li>
                 <Link to="/services/clearance/house-clearance-east-sussex" className="text-base text-gray-300/80 hover:text-[#F4C430] transition-colors duration-200 flex items-center gap-2 pl-3">
                   <span className="w-1.5 h-1.5 rounded-full bg-[#F4C430]/50 flex-shrink-0" />
-                  House Clearance East Sussex
+                  House Clearance
                 </Link>
               </li>
               <li>
@@ -116,7 +116,7 @@ export const Footer = () => {
               <li>
                 <Link to="/services/removal/house-removals-east-sussex" className="text-base text-gray-300/80 hover:text-[#F4C430] transition-colors duration-200 flex items-center gap-2 pl-3">
                   <span className="w-1.5 h-1.5 rounded-full bg-[#F4C430]/50 flex-shrink-0" />
-                  House Removals East Sussex
+                  House Removals
                 </Link>
               </li>
               <li>
