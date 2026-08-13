@@ -96,25 +96,13 @@ export const Footer = () => {
             </h4>
             <ul className="space-y-3.5">
               <li>
-                <Link to="/services/clearance" className="text-base text-gray-300/80 hover:text-[#F4C430] transition-colors duration-200 flex items-center gap-2">
-                  <span className="w-1.5 h-1.5 rounded-full bg-[#F4C430]/50 flex-shrink-0" />
-                  Clearance
-                </Link>
-              </li>
-              <li>
-                <Link to="/services/clearance/house-clearance-east-sussex" className="text-base text-gray-300/80 hover:text-[#F4C430] transition-colors duration-200 flex items-center gap-2 pl-3">
+                <Link to="/services/clearance/house-clearance-east-sussex" className="text-base text-gray-300/80 hover:text-[#F4C430] transition-colors duration-200 flex items-center gap-2">
                   <span className="w-1.5 h-1.5 rounded-full bg-[#F4C430]/50 flex-shrink-0" />
                   House Clearance
                 </Link>
               </li>
               <li>
-                <Link to="/services/removal" className="text-base text-gray-300/80 hover:text-[#F4C430] transition-colors duration-200 flex items-center gap-2">
-                  <span className="w-1.5 h-1.5 rounded-full bg-[#F4C430]/50 flex-shrink-0" />
-                  Removal
-                </Link>
-              </li>
-              <li>
-                <Link to="/services/removal/house-removals-east-sussex" className="text-base text-gray-300/80 hover:text-[#F4C430] transition-colors duration-200 flex items-center gap-2 pl-3">
+                <Link to="/services/removal/house-removals-east-sussex" className="text-base text-gray-300/80 hover:text-[#F4C430] transition-colors duration-200 flex items-center gap-2">
                   <span className="w-1.5 h-1.5 rounded-full bg-[#F4C430]/50 flex-shrink-0" />
                   House Removals
                 </Link>
