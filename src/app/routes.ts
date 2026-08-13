@@ -60,7 +60,7 @@ export const router = createBrowserRouter([
         Component: WasteRemovalPage,
       },
       {
-        path: "services/house-clearance-east-sussex",
+        path: "services/clearance/house-clearance-east-sussex",
         Component: HouseClearanceEastSussexPage,
       },
       {

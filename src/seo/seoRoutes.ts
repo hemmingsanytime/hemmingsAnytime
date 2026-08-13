@@ -188,7 +188,7 @@ export const seoPages: SeoPage[] = [
         lastModified: "2026-06-26",
     },
     {
-        path: "/services/house-clearance-east-sussex",
+        path: "/services/clearance/house-clearance-east-sussex",
         title: "House Clearance East Sussex | Hemmings Anytime",
         description:
             "Reliable house clearance in East Sussex for furniture, waste and unwanted items. Get professional property clearance. Contact us today.",
