@@ -89,73 +89,109 @@ export const Footer = () => {
             </ul>
           </div>
 
-          {/* Column 3 — Our Services */}
+          {/* Column 3 — Clearance & Removals */}
           <div>
             <h4 className="text-white font-bold text-base mb-5 uppercase tracking-[0.15em]">
-              Our Services
+              Clearance & Removals
             </h4>
-            <ul className="space-y-3.5">
+            <ul className="space-y-2.5">
               <li>
-                <Link to="/services/clearance/house-clearance-east-sussex" className="text-base text-gray-300/80 hover:text-[#F4C430] transition-colors duration-200 flex items-center gap-2">
+                <Link to="/services/clearance/house-clearance-east-sussex" className="text-sm text-gray-300/80 hover:text-[#F4C430] transition-colors duration-200 flex items-center gap-2">
                   <span className="w-1.5 h-1.5 rounded-full bg-[#F4C430]/50 flex-shrink-0" />
                   House Clearance
                 </Link>
               </li>
               <li>
-                <Link to="/services/removal/house-removals-east-sussex" className="text-base text-gray-300/80 hover:text-[#F4C430] transition-colors duration-200 flex items-center gap-2">
+                <Link to="/services/clearance/probate-clearance-east-sussex" className="text-sm text-gray-300/80 hover:text-[#F4C430] transition-colors duration-200 flex items-center gap-2">
+                  <span className="w-1.5 h-1.5 rounded-full bg-[#F4C430]/50 flex-shrink-0" />
+                  Probate Clearance
+                </Link>
+              </li>
+              <li>
+                <Link to="/services/clearance/office-clearance-east-sussex" className="text-sm text-gray-300/80 hover:text-[#F4C430] transition-colors duration-200 flex items-center gap-2">
+                  <span className="w-1.5 h-1.5 rounded-full bg-[#F4C430]/50 flex-shrink-0" />
+                  Office Clearance
+                </Link>
+              </li>
+              <li>
+                <Link to="/services/clearance/rubbish-clearance-east-sussex" className="text-sm text-gray-300/80 hover:text-[#F4C430] transition-colors duration-200 flex items-center gap-2">
+                  <span className="w-1.5 h-1.5 rounded-full bg-[#F4C430]/50 flex-shrink-0" />
+                  Rubbish Clearance
+                </Link>
+              </li>
+              <li>
+                <Link to="/services/removal/house-removals-east-sussex" className="text-sm text-gray-300/80 hover:text-[#F4C430] transition-colors duration-200 flex items-center gap-2">
                   <span className="w-1.5 h-1.5 rounded-full bg-[#F4C430]/50 flex-shrink-0" />
                   House Removals
                 </Link>
               </li>
               <li>
-                <Link to="/services/storage" className="text-base text-gray-300/80 hover:text-[#F4C430] transition-colors duration-200 flex items-center gap-2">
+                <Link to="/services/removal/office-removals-east-sussex" className="text-sm text-gray-300/80 hover:text-[#F4C430] transition-colors duration-200 flex items-center gap-2">
                   <span className="w-1.5 h-1.5 rounded-full bg-[#F4C430]/50 flex-shrink-0" />
-                  Storage
+                  Office Removals
                 </Link>
               </li>
               <li>
-                <Link to="/services/cleaning" className="text-base text-gray-300/80 hover:text-[#F4C430] transition-colors duration-200 flex items-center gap-2">
+                <Link to="/services/removal/furniture-removal-east-sussex" className="text-sm text-gray-300/80 hover:text-[#F4C430] transition-colors duration-200 flex items-center gap-2">
                   <span className="w-1.5 h-1.5 rounded-full bg-[#F4C430]/50 flex-shrink-0" />
-                  Cleaning
+                  Furniture Removal
                 </Link>
               </li>
               <li>
-                <Link to="/services/painting-decor" className="text-base text-gray-300/80 hover:text-[#F4C430] transition-colors duration-200 flex items-center gap-2">
+                <Link to="/services/storage/removal-and-storage-east-sussex" className="text-sm text-gray-300/80 hover:text-[#F4C430] transition-colors duration-200 flex items-center gap-2">
                   <span className="w-1.5 h-1.5 rounded-full bg-[#F4C430]/50 flex-shrink-0" />
-                  Painting & Decor
-                </Link>
-              </li>
-              <li>
-                <Link to="/services/marine-detailing" className="text-base text-gray-300/80 hover:text-[#F4C430] transition-colors duration-200 flex items-center gap-2">
-                  <span className="w-1.5 h-1.5 rounded-full bg-[#F4C430]/50 flex-shrink-0" />
-                  Marine Detailing
-                </Link>
-              </li>
-              <li>
-                <Link to="/services/aviation-detailing" className="text-base text-gray-300/80 hover:text-[#F4C430] transition-colors duration-200 flex items-center gap-2">
-                  <span className="w-1.5 h-1.5 rounded-full bg-[#F4C430]/50 flex-shrink-0" />
-                  Aviation Detailing
-                </Link>
-              </li>
-              <li>
-                <Link to="/services/waste-removal" className="text-base text-gray-300/80 hover:text-[#F4C430] transition-colors duration-200 flex items-center gap-2">
-                  <span className="w-1.5 h-1.5 rounded-full bg-[#F4C430]/50 flex-shrink-0" />
-                  Waste Removal
+                  Removal & Storage
                 </Link>
               </li>
             </ul>
           </div>
 
-          {/* Column 3b — Service Areas */}
+          {/* Column 4 — Specialist Services & Service Areas */}
           <div>
             <h4 className="text-white font-bold text-base mb-5 uppercase tracking-[0.15em]">
-              Service Areas
+              Specialist Services & Areas
             </h4>
-            <ul className="space-y-3.5">
+            <ul className="space-y-2.5">
               <li>
-                <Link to="/areas/brighton" className="text-base text-gray-300/80 hover:text-[#F4C430] transition-colors duration-200 flex items-center gap-2">
+                <Link to="/services/storage" className="text-sm text-gray-300/80 hover:text-[#F4C430] transition-colors duration-200 flex items-center gap-2">
                   <span className="w-1.5 h-1.5 rounded-full bg-[#F4C430]/50 flex-shrink-0" />
-                  Brighton
+                  Storage Solutions
+                </Link>
+              </li>
+              <li>
+                <Link to="/services/cleaning" className="text-sm text-gray-300/80 hover:text-[#F4C430] transition-colors duration-200 flex items-center gap-2">
+                  <span className="w-1.5 h-1.5 rounded-full bg-[#F4C430]/50 flex-shrink-0" />
+                  Cleaning Services
+                </Link>
+              </li>
+              <li>
+                <Link to="/services/painting-decor" className="text-sm text-gray-300/80 hover:text-[#F4C430] transition-colors duration-200 flex items-center gap-2">
+                  <span className="w-1.5 h-1.5 rounded-full bg-[#F4C430]/50 flex-shrink-0" />
+                  Painting & Decor
+                </Link>
+              </li>
+              <li>
+                <Link to="/services/marine-detailing" className="text-sm text-gray-300/80 hover:text-[#F4C430] transition-colors duration-200 flex items-center gap-2">
+                  <span className="w-1.5 h-1.5 rounded-full bg-[#F4C430]/50 flex-shrink-0" />
+                  Marine Detailing
+                </Link>
+              </li>
+              <li>
+                <Link to="/services/aviation-detailing" className="text-sm text-gray-300/80 hover:text-[#F4C430] transition-colors duration-200 flex items-center gap-2">
+                  <span className="w-1.5 h-1.5 rounded-full bg-[#F4C430]/50 flex-shrink-0" />
+                  Aviation Detailing
+                </Link>
+              </li>
+              <li>
+                <Link to="/services/waste-removal" className="text-sm text-gray-300/80 hover:text-[#F4C430] transition-colors duration-200 flex items-center gap-2">
+                  <span className="w-1.5 h-1.5 rounded-full bg-[#F4C430]/50 flex-shrink-0" />
+                  Waste Removal
+                </Link>
+              </li>
+              <li className="pt-2 border-t border-white/10">
+                <Link to="/areas/brighton" className="text-sm font-semibold text-[#F4C430] hover:underline flex items-center gap-2">
+                  <span className="w-1.5 h-1.5 rounded-full bg-[#F4C430] flex-shrink-0" />
+                  Brighton & Hove Removals
                 </Link>
               </li>
             </ul>
