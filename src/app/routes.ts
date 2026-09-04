@@ -18,6 +18,7 @@ import { BrightonPage } from "./pages/BrightonPage";
 import { HouseClearanceEastSussexPage } from "./pages/HouseClearanceEastSussexPage";
 import { ProbateClearanceEastSussexPage } from "./pages/ProbateClearanceEastSussexPage";
 import { OfficeClearanceEastSussexPage } from "./pages/OfficeClearanceEastSussexPage";
+import { RubbishClearanceEastSussexPage } from "./pages/RubbishClearanceEastSussexPage";
 import { HouseRemovalsEastSussexPage } from "./pages/HouseRemovalsEastSussexPage";
 import { OfficeRemovalsEastSussexPage } from "./pages/OfficeRemovalsEastSussexPage";
 import { ServicesPage } from "./pages/ServicesPage";
@@ -79,6 +80,10 @@ export const router = createBrowserRouter([
       {
         path: "services/clearance/office-clearance-east-sussex",
         Component: OfficeClearanceEastSussexPage,
+      },
+      {
+        path: "services/clearance/rubbish-clearance-east-sussex",
+        Component: RubbishClearanceEastSussexPage,
       },
       {
         path: "services/removal/house-removals-east-sussex",

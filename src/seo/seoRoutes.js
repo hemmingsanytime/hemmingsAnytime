@@ -191,6 +191,18 @@ export const seoPages = [
 		priority: "0.8",
 		lastModified: "2026-09-04",
 	},
+	{
+		path: "/services/clearance/rubbish-clearance-east-sussex",
+		title: "Rubbish Clearance East Sussex – 5★ Rated | Hemmings",
+		description:
+			"Rubbish clearance East Sussex for homes and businesses. Reliable waste removal, garden clearance and responsible disposal. Get a free quote today!",
+		keywords:
+			"Rubbish Clearance East Sussex, waste clearance East Sussex, garden clearance East Sussex, rubbish removal, bulky waste collection",
+		image: "/open-graph-hero-screenshot.png",
+		changefreq: "weekly",
+		priority: "0.8",
+		lastModified: "2026-09-04",
+	},
 ];
 
 export const structuredData = {

@@ -46,7 +46,7 @@ const popularServices: ServiceItem[] = [
   {
     title: "Garden & Rubbish Clearance East Sussex",
     description: "Garden waste, general rubbish, and bulky items removed and disposed of through licensed routes — no fly-tipping, full paperwork provided.",
-    link: "/services/waste-removal",
+    link: "/services/clearance/rubbish-clearance-east-sussex",
     icon: <Trash2 className="w-6 h-6 text-[#D62828]" />
   },
   {
