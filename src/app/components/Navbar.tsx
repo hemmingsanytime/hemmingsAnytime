@@ -55,7 +55,7 @@ export const Navbar = () => {
                 Services
                 <ChevronDown size={15} className="transition-transform group-hover:rotate-180" />
               </button>
-              <div className="absolute top-full -left-4 w-64 bg-white border border-[#0E3A6D]/10 shadow-xl rounded-2xl py-3 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200">
+              <div className="absolute top-full -left-4 w-64 max-h-[calc(100vh-110px)] overflow-y-auto custom-scrollbar bg-white border border-[#0E3A6D]/10 shadow-2xl rounded-2xl py-3 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200">
                 {/* All Services Link */}
                 <Link 
                   to="/services" 
@@ -160,7 +160,7 @@ export const Navbar = () => {
                 Service Areas
                 <ChevronDown size={15} className="transition-transform group-hover:rotate-180" />
               </button>
-              <div className="absolute top-full -left-4 w-56 bg-white border border-[#0E3A6D]/10 shadow-xl rounded-2xl py-4 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200">
+              <div className="absolute top-full -left-4 w-56 max-h-[calc(100vh-110px)] overflow-y-auto custom-scrollbar bg-white border border-[#0E3A6D]/10 shadow-2xl rounded-2xl py-4 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200">
                 {serviceAreas.map((area) =>
                   'path' in area && area.path ? (
                     <Link
@@ -246,7 +246,7 @@ export const Navbar = () => {
 
       {/* Mobile Menu */}
       {isMenuOpen && (
-        <div className="lg:hidden bg-white border-b border-[#0E3A6D]/10 animate-in fade-in slide-in-from-top-4 duration-300">
+        <div className="lg:hidden bg-white border-b border-[#0E3A6D]/10 animate-in fade-in slide-in-from-top-4 duration-300 max-h-[calc(100vh-80px)] overflow-y-auto custom-scrollbar">
           <div className="px-4 pt-2 pb-6 space-y-1">
 
             {/* Services accordion */}
