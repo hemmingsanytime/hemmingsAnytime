@@ -17,6 +17,7 @@ import { TermsOfServicePage } from "./pages/TermsOfServicePage";
 import { BrightonPage } from "./pages/BrightonPage";
 import { HouseClearanceEastSussexPage } from "./pages/HouseClearanceEastSussexPage";
 import { HouseRemovalsEastSussexPage } from "./pages/HouseRemovalsEastSussexPage";
+import { ServicesPage } from "./pages/ServicesPage";
 import { NotFound } from "./pages/NotFound";
 
 export const router = createBrowserRouter([
@@ -27,6 +28,10 @@ export const router = createBrowserRouter([
       {
         index: true,
         Component: Home,
+      },
+      {
+        path: "services",
+        Component: ServicesPage,
       },
       {
         path: "services/clearance",

@@ -56,6 +56,14 @@ export const Navbar = () => {
                 <ChevronDown size={15} className="transition-transform group-hover:rotate-180" />
               </button>
               <div className="absolute top-full -left-4 w-64 bg-white border border-[#0E3A6D]/10 shadow-xl rounded-2xl py-3 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200">
+                {/* All Services Link */}
+                <Link 
+                  to="/services" 
+                  className="block px-6 py-2.5 font-bold text-[#D62828] hover:bg-[#F2F4FF] transition-colors border-b border-gray-100"
+                >
+                  All Services
+                </Link>
+
                 {/* Clearance Parent Link */}
                 <Link 
                   to="/services/clearance" 
@@ -207,6 +215,7 @@ export const Navbar = () => {
             </button>
             {isMobileServicesOpen && (
               <div className="space-y-1">
+                <Link to="/services" onClick={() => setIsMenuOpen(false)} className="block px-6 py-2.5 font-bold text-[#D62828] hover:bg-[#F2F4FF] rounded-lg">All Services</Link>
                 <Link to="/services/clearance" onClick={() => setIsMenuOpen(false)} className="block px-6 py-2.5 font-bold text-[#0E3A6D] hover:bg-[#F2F4FF] rounded-lg">Clearance</Link>
                 <div className="pl-10 pr-4 py-1 space-y-1 bg-[#F8FAFC] rounded-lg border-l-2 border-[#D62828]/40 my-1">
                   <Link to="/services/clearance/house-clearance-east-sussex" onClick={() => setIsMenuOpen(false)} className="flex items-center gap-2 py-1.5 text-sm font-medium text-[#4B5563] hover:text-[#D62828]">

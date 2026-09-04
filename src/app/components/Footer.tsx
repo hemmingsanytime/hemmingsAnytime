@@ -63,10 +63,10 @@ export const Footer = () => {
             </h4>
             <ul className="space-y-3.5">
               <li>
-                <a href="/#services" className="text-base text-gray-300/80 hover:text-[#F4C430] transition-colors duration-200 flex items-center gap-2">
+                <Link to="/services" className="text-base text-gray-300/80 hover:text-[#F4C430] transition-colors duration-200 flex items-center gap-2">
                   <span className="w-1.5 h-1.5 rounded-full bg-[#F4C430]/50 flex-shrink-0" />
                   Services
-                </a>
+                </Link>
               </li>
               <li>
                 <Link to="/reviews" className="text-base text-gray-300/80 hover:text-[#F4C430] transition-colors duration-200 flex items-center gap-2">

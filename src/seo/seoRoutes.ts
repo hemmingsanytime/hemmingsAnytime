@@ -44,6 +44,18 @@ export const defaultSeo: SeoPage = {
 export const seoPages: SeoPage[] = [
     defaultSeo,
     {
+        path: "/services",
+        title: "House Clearance, Removals & Storage in East Sussex | Hemmings Anytime",
+        description:
+            "Hemmings Anytime clears, moves, and stores homes and businesses across East Sussex. One team. One call. Fast, fair quotes.",
+        keywords:
+            "House Clearance East Sussex, House Removals East Sussex, Storage East Sussex, Probate Clearance East Sussex, Office Clearance East Sussex, Waste Clearance East Sussex",
+        image: "/open-graph-hero-screenshot.png",
+        changefreq: "weekly",
+        priority: "0.9",
+        lastModified: "2026-09-04",
+    },
+    {
         path: "/services/clearance",
         title: "Clearance Services | Hemmings Anytime",
         description:
