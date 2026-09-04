@@ -128,6 +128,13 @@ export const Navbar = () => {
                     <span className="w-1.5 h-1.5 rounded-full bg-[#D62828] shrink-0" />
                     <span>Office Removals</span>
                   </Link>
+                  <Link 
+                    to="/services/removal/furniture-removal-east-sussex" 
+                    className="flex items-center gap-2 pl-10 pr-6 py-2 text-sm font-medium text-[#4B5563] hover:text-[#D62828] hover:bg-[#F1F5F9] transition-colors"
+                  >
+                    <span className="w-1.5 h-1.5 rounded-full bg-[#D62828] shrink-0" />
+                    <span>Furniture Removal</span>
+                  </Link>
                 </div>
                 <Link to="/services/storage" className="block px-6 py-2.5 font-bold text-[#0E3A6D] hover:bg-[#F2F4FF] transition-colors">Storage</Link>
                 <div className="my-1 py-1 bg-[#F8FAFC]">
@@ -281,6 +288,10 @@ export const Navbar = () => {
                   <Link to="/services/removal/office-removals-east-sussex" onClick={() => setIsMenuOpen(false)} className="flex items-center gap-2 py-1.5 text-sm font-medium text-[#4B5563] hover:text-[#D62828]">
                     <span className="w-1.5 h-1.5 rounded-full bg-[#D62828] shrink-0" />
                     <span>Office Removals</span>
+                  </Link>
+                  <Link to="/services/removal/furniture-removal-east-sussex" onClick={() => setIsMenuOpen(false)} className="flex items-center gap-2 py-1.5 text-sm font-medium text-[#4B5563] hover:text-[#D62828]">
+                    <span className="w-1.5 h-1.5 rounded-full bg-[#D62828] shrink-0" />
+                    <span>Furniture Removal</span>
                   </Link>
                 </div>
                 <Link to="/services/storage" onClick={() => setIsMenuOpen(false)} className="block px-6 py-2.5 font-bold text-[#0E3A6D] hover:bg-[#F2F4FF] rounded-lg">Storage</Link>

@@ -65,7 +65,7 @@ const popularServices: ServiceItem[] = [
   {
     title: "Furniture Removal East Sussex",
     description: "Single items or a full load, collected and taken on for donation, recycling, or licensed disposal.",
-    link: "/contact?service=furniture-removal-east-sussex",
+    link: "/services/removal/furniture-removal-east-sussex",
     icon: <Package className="w-6 h-6 text-[#D62828]" />
   },
   {

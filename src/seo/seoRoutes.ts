@@ -283,6 +283,18 @@ export const seoPages: SeoPage[] = [
         priority: "0.8",
         lastModified: "2026-09-04",
     },
+    {
+        path: "/services/removal/furniture-removal-east-sussex",
+        title: "Furniture Removal East Sussex: 24/7 Expert Service",
+        description:
+            "Need furniture removal East Sussex? Get expert help removing sofas, beds, tables and unwanted furniture. Fast, careful service with free quotes.",
+        keywords:
+            "Furniture Removal East Sussex, sofa removal East Sussex, furniture disposal, bulky item collection, bed removal East Sussex",
+        image: "/open-graph-hero-screenshot.png",
+        changefreq: "weekly",
+        priority: "0.8",
+        lastModified: "2026-09-04",
+    },
 ];
 
 export const structuredData: StructuredData = {
