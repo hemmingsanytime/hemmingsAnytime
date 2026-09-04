@@ -59,7 +59,7 @@ const popularServices: ServiceItem[] = [
   {
     title: "Office Removals East Sussex",
     description: "Business relocations planned around opening hours, with weekend and evening slots available so a team loses no working time.",
-    link: "/contact?service=office-removals-east-sussex",
+    link: "/services/removal/office-removals-east-sussex",
     icon: <Building2 className="w-6 h-6 text-[#D62828]" />
   },
   {

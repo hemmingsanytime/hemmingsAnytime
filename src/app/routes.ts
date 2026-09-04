@@ -19,6 +19,7 @@ import { HouseClearanceEastSussexPage } from "./pages/HouseClearanceEastSussexPa
 import { ProbateClearanceEastSussexPage } from "./pages/ProbateClearanceEastSussexPage";
 import { OfficeClearanceEastSussexPage } from "./pages/OfficeClearanceEastSussexPage";
 import { HouseRemovalsEastSussexPage } from "./pages/HouseRemovalsEastSussexPage";
+import { OfficeRemovalsEastSussexPage } from "./pages/OfficeRemovalsEastSussexPage";
 import { ServicesPage } from "./pages/ServicesPage";
 import { NotFound } from "./pages/NotFound";
 
@@ -82,6 +83,10 @@ export const router = createBrowserRouter([
       {
         path: "services/removal/house-removals-east-sussex",
         Component: HouseRemovalsEastSussexPage,
+      },
+      {
+        path: "services/removal/office-removals-east-sussex",
+        Component: OfficeRemovalsEastSussexPage,
       },
       {
         path: "contact",

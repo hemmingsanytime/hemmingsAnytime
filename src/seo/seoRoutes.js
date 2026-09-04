@@ -179,6 +179,18 @@ export const seoPages = [
 		priority: "0.8",
 		lastModified: "2026-09-04",
 	},
+	{
+		path: "/services/removal/office-removals-east-sussex",
+		title: "Office Removals East Sussex – Fast | Hemmings Anytime",
+		description:
+			"Need a removal company East Sussex wide? Hemmings Anytime offers fast, insured office removals East Sussex businesses trust. Get a free quote now!",
+		keywords:
+			"Office Removals East Sussex, removal company East Sussex, commercial office relocation, office moving service, business movers East Sussex",
+		image: "/open-graph-hero-screenshot.png",
+		changefreq: "weekly",
+		priority: "0.8",
+		lastModified: "2026-09-04",
+	},
 ];
 
 export const structuredData = {
