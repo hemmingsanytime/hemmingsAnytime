@@ -71,7 +71,7 @@ const popularServices: ServiceItem[] = [
   {
     title: "Removal & Storage East Sussex",
     description: "Moving and storing combined into one booking. Short or long-term units, collected and delivered back on request.",
-    link: "/services/storage",
+    link: "/services/storage/removal-and-storage-east-sussex",
     icon: <Box className="w-6 h-6 text-[#D62828]" />
   }
 ];

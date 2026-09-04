@@ -271,6 +271,18 @@ export const seoPages: SeoPage[] = [
         priority: "0.8",
         lastModified: "2026-09-04",
     },
+    {
+        path: "/services/storage/removal-and-storage-east-sussex",
+        title: "Removal and Storage East Sussex: 5 Secure Moving Options",
+        description:
+            "Need removal and storage East Sussex? Move your furniture and belongings with secure storage, careful handling and reliable local support. Get a free quote.",
+        keywords:
+            "Removal and Storage East Sussex, removal and storage, secure storage East Sussex, house removals and storage, same day removals East Sussex",
+        image: "/open-graph-hero-screenshot.png",
+        changefreq: "weekly",
+        priority: "0.8",
+        lastModified: "2026-09-04",
+    },
 ];
 
 export const structuredData: StructuredData = {
