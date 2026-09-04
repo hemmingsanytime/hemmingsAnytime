@@ -235,6 +235,18 @@ export const seoPages: SeoPage[] = [
         priority: "0.8",
         lastModified: "2026-09-04",
     },
+    {
+        path: "/services/clearance/office-clearance-east-sussex",
+        title: "Office Clearance East Sussex – 5★ Rated | Hemmings Anytime",
+        description:
+            "Office clearance East Sussex businesses trust. Hemmings Anytime offers same-day commercial clearance across Brighton, Hastings & more. Get a free quote!",
+        keywords:
+            "Office Clearance East Sussex, commercial clearance East Sussex, office furniture removal, workplace clear-out, WEEE computer recycling",
+        image: "/open-graph-hero-screenshot.png",
+        changefreq: "weekly",
+        priority: "0.8",
+        lastModified: "2026-09-04",
+    },
 ];
 
 export const structuredData: StructuredData = {

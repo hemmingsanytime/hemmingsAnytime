@@ -40,7 +40,7 @@ const popularServices: ServiceItem[] = [
   {
     title: "Office Clearance East Sussex",
     description: "Commercial spaces cleared with minimal disruption. Evening and weekend slots keep a business running on schedule. Desks, IT equipment, and stock handled with care.",
-    link: "/contact?service=office-clearance-east-sussex",
+    link: "/services/clearance/office-clearance-east-sussex",
     icon: <Building2 className="w-6 h-6 text-[#D62828]" />
   },
   {
