@@ -81,6 +81,13 @@ export const Navbar = () => {
                     <span className="w-1.5 h-1.5 rounded-full bg-[#D62828] shrink-0" />
                     <span>House Clearance</span>
                   </Link>
+                  <Link 
+                    to="/services/clearance/probate-clearance-east-sussex" 
+                    className="flex items-center gap-2 pl-10 pr-6 py-2 text-sm font-medium text-[#4B5563] hover:text-[#D62828] hover:bg-[#F1F5F9] transition-colors"
+                  >
+                    <span className="w-1.5 h-1.5 rounded-full bg-[#D62828] shrink-0" />
+                    <span>Probate Clearance</span>
+                  </Link>
                 </div>
 
                 {/* Removal Parent Link */}
@@ -221,6 +228,10 @@ export const Navbar = () => {
                   <Link to="/services/clearance/house-clearance-east-sussex" onClick={() => setIsMenuOpen(false)} className="flex items-center gap-2 py-1.5 text-sm font-medium text-[#4B5563] hover:text-[#D62828]">
                     <span className="w-1.5 h-1.5 rounded-full bg-[#D62828] shrink-0" />
                     <span>House Clearance</span>
+                  </Link>
+                  <Link to="/services/clearance/probate-clearance-east-sussex" onClick={() => setIsMenuOpen(false)} className="flex items-center gap-2 py-1.5 text-sm font-medium text-[#4B5563] hover:text-[#D62828]">
+                    <span className="w-1.5 h-1.5 rounded-full bg-[#D62828] shrink-0" />
+                    <span>Probate Clearance</span>
                   </Link>
                 </div>
                 <Link to="/services/removal" onClick={() => setIsMenuOpen(false)} className="block px-6 py-2.5 font-bold text-[#0E3A6D] hover:bg-[#F2F4FF] rounded-lg">Removal</Link>

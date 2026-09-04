@@ -223,6 +223,18 @@ export const seoPages: SeoPage[] = [
         priority: "0.8",
         lastModified: "2026-08-13",
     },
+    {
+        path: "/services/clearance/probate-clearance-east-sussex",
+        title: "Probate Clearance East Sussex | Hemmings Anytime",
+        description:
+            "Caring, reliable probate clearance across East Sussex from Hemmings Anytime. Careful sorting, honest pricing and a free quote for executors and families.",
+        keywords:
+            "Probate Clearance East Sussex, estate clearance East Sussex, probate house clearance, executor property clearance, probate waste disposal",
+        image: "/open-graph-hero-screenshot.png",
+        changefreq: "weekly",
+        priority: "0.8",
+        lastModified: "2026-09-04",
+    },
 ];
 
 export const structuredData: StructuredData = {

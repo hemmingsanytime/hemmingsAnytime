@@ -34,7 +34,7 @@ const popularServices: ServiceItem[] = [
   {
     title: "Probate Clearance East Sussex",
     description: "A sensitive service for after a bereavement. Paperwork, keepsakes, and valuables are checked carefully first, with solicitors and families kept informed throughout.",
-    link: "/contact?service=probate-clearance-east-sussex",
+    link: "/services/clearance/probate-clearance-east-sussex",
     icon: <FileText className="w-6 h-6 text-[#D62828]" />
   },
   {
