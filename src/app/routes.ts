@@ -128,6 +128,10 @@ export const router = createBrowserRouter([
         Component: BrightonPage,
       },
       {
+        path: "areas/east-sussex",
+        Component: ServicesPage,
+      },
+      {
         path: "*",
         Component: NotFound,
       },

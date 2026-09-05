@@ -19,6 +19,7 @@ export const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isMobileServicesOpen, setIsMobileServicesOpen] = useState(false);
   const [isMobileAreasOpen, setIsMobileAreasOpen] = useState(false);
+  const [isMobileEastSussexOpen, setIsMobileEastSussexOpen] = useState(false);
   const location = useLocation();
   const navigate = useNavigate();
 
@@ -48,14 +49,14 @@ export const Navbar = () => {
           </Link>
           
           {/* Desktop Nav */}
-          <div className="hidden lg:flex items-center gap-6">
+          <div className="hidden lg:flex items-center gap-5 xl:gap-6">
             {/* Services Dropdown */}
             <div className="relative group">
               <button className="text-[#6B7280] hover:text-[#0E3A6D] font-medium transition-colors flex items-center gap-1">
                 Services
                 <ChevronDown size={15} className="transition-transform group-hover:rotate-180" />
               </button>
-              <div className="absolute top-full -left-4 w-64 max-h-[calc(100vh-110px)] overflow-y-auto custom-scrollbar bg-white border border-[#0E3A6D]/10 shadow-2xl rounded-2xl py-3 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200">
+              <div className="absolute top-full -left-4 w-56 max-h-[calc(100vh-110px)] overflow-y-auto custom-scrollbar bg-white border border-[#0E3A6D]/10 shadow-2xl rounded-2xl py-3 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200">
                 {/* All Services Link */}
                 <Link 
                   to="/services" 
@@ -64,88 +65,9 @@ export const Navbar = () => {
                   All Services
                 </Link>
 
-                {/* Clearance Parent Link */}
-                <Link 
-                  to="/services/clearance" 
-                  className="block px-6 py-2.5 font-bold text-[#0E3A6D] hover:bg-[#F2F4FF] transition-colors"
-                >
-                  Clearance
-                </Link>
-                
-                {/* Child pages under Clearance */}
-                <div className="my-1 py-1 bg-[#F8FAFC]">
-                  <Link 
-                    to="/services/clearance/house-clearance-east-sussex" 
-                    className="flex items-center gap-2 pl-10 pr-6 py-2 text-sm font-medium text-[#4B5563] hover:text-[#D62828] hover:bg-[#F1F5F9] transition-colors"
-                  >
-                    <span className="w-1.5 h-1.5 rounded-full bg-[#D62828] shrink-0" />
-                    <span>House Clearance</span>
-                  </Link>
-                  <Link 
-                    to="/services/clearance/probate-clearance-east-sussex" 
-                    className="flex items-center gap-2 pl-10 pr-6 py-2 text-sm font-medium text-[#4B5563] hover:text-[#D62828] hover:bg-[#F1F5F9] transition-colors"
-                  >
-                    <span className="w-1.5 h-1.5 rounded-full bg-[#D62828] shrink-0" />
-                    <span>Probate Clearance</span>
-                  </Link>
-                  <Link 
-                    to="/services/clearance/office-clearance-east-sussex" 
-                    className="flex items-center gap-2 pl-10 pr-6 py-2 text-sm font-medium text-[#4B5563] hover:text-[#D62828] hover:bg-[#F1F5F9] transition-colors"
-                  >
-                    <span className="w-1.5 h-1.5 rounded-full bg-[#D62828] shrink-0" />
-                    <span>Office Clearance</span>
-                  </Link>
-                  <Link 
-                    to="/services/clearance/rubbish-clearance-east-sussex" 
-                    className="flex items-center gap-2 pl-10 pr-6 py-2 text-sm font-medium text-[#4B5563] hover:text-[#D62828] hover:bg-[#F1F5F9] transition-colors"
-                  >
-                    <span className="w-1.5 h-1.5 rounded-full bg-[#D62828] shrink-0" />
-                    <span>Rubbish Clearance</span>
-                  </Link>
-                </div>
-
-                {/* Removal Parent Link */}
-                <Link 
-                  to="/services/removal" 
-                  className="block px-6 py-2.5 font-bold text-[#0E3A6D] hover:bg-[#F2F4FF] transition-colors"
-                >
-                  Removal
-                </Link>
-                
-                {/* Child pages under Removal */}
-                <div className="my-1 py-1 bg-[#F8FAFC]">
-                  <Link 
-                    to="/services/removal/house-removals-east-sussex" 
-                    className="flex items-center gap-2 pl-10 pr-6 py-2 text-sm font-medium text-[#4B5563] hover:text-[#D62828] hover:bg-[#F1F5F9] transition-colors"
-                  >
-                    <span className="w-1.5 h-1.5 rounded-full bg-[#D62828] shrink-0" />
-                    <span>House Removals</span>
-                  </Link>
-                  <Link 
-                    to="/services/removal/office-removals-east-sussex" 
-                    className="flex items-center gap-2 pl-10 pr-6 py-2 text-sm font-medium text-[#4B5563] hover:text-[#D62828] hover:bg-[#F1F5F9] transition-colors"
-                  >
-                    <span className="w-1.5 h-1.5 rounded-full bg-[#D62828] shrink-0" />
-                    <span>Office Removals</span>
-                  </Link>
-                  <Link 
-                    to="/services/removal/furniture-removal-east-sussex" 
-                    className="flex items-center gap-2 pl-10 pr-6 py-2 text-sm font-medium text-[#4B5563] hover:text-[#D62828] hover:bg-[#F1F5F9] transition-colors"
-                  >
-                    <span className="w-1.5 h-1.5 rounded-full bg-[#D62828] shrink-0" />
-                    <span>Furniture Removal</span>
-                  </Link>
-                </div>
-                <Link to="/services/storage" className="block px-6 py-2.5 font-bold text-[#0E3A6D] hover:bg-[#F2F4FF] transition-colors">Storage</Link>
-                <div className="my-1 py-1 bg-[#F8FAFC]">
-                  <Link 
-                    to="/services/storage/removal-and-storage-east-sussex" 
-                    className="flex items-center gap-2 pl-10 pr-6 py-2 text-sm font-medium text-[#4B5563] hover:text-[#D62828] hover:bg-[#F1F5F9] transition-colors"
-                  >
-                    <span className="w-1.5 h-1.5 rounded-full bg-[#D62828] shrink-0" />
-                    <span>Removal & Storage</span>
-                  </Link>
-                </div>
+                <Link to="/services/clearance" className="block px-6 py-2.5 text-[#6B7280] hover:bg-[#F2F4FF] hover:text-[#0E3A6D] transition-colors">Clearance</Link>
+                <Link to="/services/removal" className="block px-6 py-2.5 text-[#6B7280] hover:bg-[#F2F4FF] hover:text-[#0E3A6D] transition-colors">Removal</Link>
+                <Link to="/services/storage" className="block px-6 py-2.5 text-[#6B7280] hover:bg-[#F2F4FF] hover:text-[#0E3A6D] transition-colors">Storage</Link>
                 <Link to="/services/cleaning" className="block px-6 py-2.5 text-[#6B7280] hover:bg-[#F2F4FF] hover:text-[#0E3A6D] transition-colors">Cleaning</Link>
                 <Link to="/services/painting-decor" className="block px-6 py-2.5 text-[#6B7280] hover:bg-[#F2F4FF] hover:text-[#0E3A6D] transition-colors">Painting & Decor</Link>
                 <Link to="/services/marine-detailing" className="block px-6 py-2.5 text-[#6B7280] hover:bg-[#F2F4FF] hover:text-[#0E3A6D] transition-colors">Marine Detailing</Link>
@@ -183,6 +105,80 @@ export const Navbar = () => {
                     </a>
                   )
                 )}
+              </div>
+            </div>
+
+            {/* East Sussex Dropdown */}
+            <div className="relative group">
+              <button className="text-[#6B7280] hover:text-[#0E3A6D] font-medium transition-colors flex items-center gap-1">
+                East Sussex
+                <ChevronDown size={15} className="transition-transform group-hover:rotate-180" />
+              </button>
+              <div className="absolute top-full -left-4 w-64 max-h-[calc(100vh-110px)] overflow-y-auto custom-scrollbar bg-white border border-[#0E3A6D]/10 shadow-2xl rounded-2xl py-3 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200">
+                <Link 
+                  to="/areas/east-sussex" 
+                  className="block px-6 py-2.5 font-bold text-[#D62828] hover:bg-[#F2F4FF] transition-colors border-b border-gray-100"
+                >
+                  East Sussex Overview
+                </Link>
+                <div className="py-1">
+                  <Link 
+                    to="/services/clearance/house-clearance-east-sussex" 
+                    className="flex items-center gap-2.5 px-6 py-2 text-sm font-medium text-[#4B5563] hover:text-[#D62828] hover:bg-[#F1F5F9] transition-colors"
+                  >
+                    <span className="w-1.5 h-1.5 rounded-full bg-[#D62828] shrink-0" />
+                    <span>House Clearance</span>
+                  </Link>
+                  <Link 
+                    to="/services/clearance/probate-clearance-east-sussex" 
+                    className="flex items-center gap-2.5 px-6 py-2 text-sm font-medium text-[#4B5563] hover:text-[#D62828] hover:bg-[#F1F5F9] transition-colors"
+                  >
+                    <span className="w-1.5 h-1.5 rounded-full bg-[#D62828] shrink-0" />
+                    <span>Probate Clearance</span>
+                  </Link>
+                  <Link 
+                    to="/services/clearance/office-clearance-east-sussex" 
+                    className="flex items-center gap-2.5 px-6 py-2 text-sm font-medium text-[#4B5563] hover:text-[#D62828] hover:bg-[#F1F5F9] transition-colors"
+                  >
+                    <span className="w-1.5 h-1.5 rounded-full bg-[#D62828] shrink-0" />
+                    <span>Office Clearance</span>
+                  </Link>
+                  <Link 
+                    to="/services/clearance/rubbish-clearance-east-sussex" 
+                    className="flex items-center gap-2.5 px-6 py-2 text-sm font-medium text-[#4B5563] hover:text-[#D62828] hover:bg-[#F1F5F9] transition-colors"
+                  >
+                    <span className="w-1.5 h-1.5 rounded-full bg-[#D62828] shrink-0" />
+                    <span>Rubbish Clearance</span>
+                  </Link>
+                  <Link 
+                    to="/services/removal/house-removals-east-sussex" 
+                    className="flex items-center gap-2.5 px-6 py-2 text-sm font-medium text-[#4B5563] hover:text-[#D62828] hover:bg-[#F1F5F9] transition-colors"
+                  >
+                    <span className="w-1.5 h-1.5 rounded-full bg-[#D62828] shrink-0" />
+                    <span>House Removals</span>
+                  </Link>
+                  <Link 
+                    to="/services/removal/office-removals-east-sussex" 
+                    className="flex items-center gap-2.5 px-6 py-2 text-sm font-medium text-[#4B5563] hover:text-[#D62828] hover:bg-[#F1F5F9] transition-colors"
+                  >
+                    <span className="w-1.5 h-1.5 rounded-full bg-[#D62828] shrink-0" />
+                    <span>Office Removals</span>
+                  </Link>
+                  <Link 
+                    to="/services/removal/furniture-removal-east-sussex" 
+                    className="flex items-center gap-2.5 px-6 py-2 text-sm font-medium text-[#4B5563] hover:text-[#D62828] hover:bg-[#F1F5F9] transition-colors"
+                  >
+                    <span className="w-1.5 h-1.5 rounded-full bg-[#D62828] shrink-0" />
+                    <span>Furniture Removal</span>
+                  </Link>
+                  <Link 
+                    to="/services/storage/removal-and-storage-east-sussex" 
+                    className="flex items-center gap-2.5 px-6 py-2 text-sm font-medium text-[#4B5563] hover:text-[#D62828] hover:bg-[#F1F5F9] transition-colors"
+                  >
+                    <span className="w-1.5 h-1.5 rounded-full bg-[#D62828] shrink-0" />
+                    <span>Removal & Storage</span>
+                  </Link>
+                </div>
               </div>
             </div>
 
@@ -260,52 +256,14 @@ export const Navbar = () => {
             {isMobileServicesOpen && (
               <div className="space-y-1">
                 <Link to="/services" onClick={() => setIsMenuOpen(false)} className="block px-6 py-2.5 font-bold text-[#D62828] hover:bg-[#F2F4FF] rounded-lg">All Services</Link>
-                <Link to="/services/clearance" onClick={() => setIsMenuOpen(false)} className="block px-6 py-2.5 font-bold text-[#0E3A6D] hover:bg-[#F2F4FF] rounded-lg">Clearance</Link>
-                <div className="pl-10 pr-4 py-1 space-y-1 bg-[#F8FAFC] rounded-lg border-l-2 border-[#D62828]/40 my-1">
-                  <Link to="/services/clearance/house-clearance-east-sussex" onClick={() => setIsMenuOpen(false)} className="flex items-center gap-2 py-1.5 text-sm font-medium text-[#4B5563] hover:text-[#D62828]">
-                    <span className="w-1.5 h-1.5 rounded-full bg-[#D62828] shrink-0" />
-                    <span>House Clearance</span>
-                  </Link>
-                  <Link to="/services/clearance/probate-clearance-east-sussex" onClick={() => setIsMenuOpen(false)} className="flex items-center gap-2 py-1.5 text-sm font-medium text-[#4B5563] hover:text-[#D62828]">
-                    <span className="w-1.5 h-1.5 rounded-full bg-[#D62828] shrink-0" />
-                    <span>Probate Clearance</span>
-                  </Link>
-                  <Link to="/services/clearance/office-clearance-east-sussex" onClick={() => setIsMenuOpen(false)} className="flex items-center gap-2 py-1.5 text-sm font-medium text-[#4B5563] hover:text-[#D62828]">
-                    <span className="w-1.5 h-1.5 rounded-full bg-[#D62828] shrink-0" />
-                    <span>Office Clearance</span>
-                  </Link>
-                  <Link to="/services/clearance/rubbish-clearance-east-sussex" onClick={() => setIsMenuOpen(false)} className="flex items-center gap-2 py-1.5 text-sm font-medium text-[#4B5563] hover:text-[#D62828]">
-                    <span className="w-1.5 h-1.5 rounded-full bg-[#D62828] shrink-0" />
-                    <span>Rubbish Clearance</span>
-                  </Link>
-                </div>
-                <Link to="/services/removal" onClick={() => setIsMenuOpen(false)} className="block px-6 py-2.5 font-bold text-[#0E3A6D] hover:bg-[#F2F4FF] rounded-lg">Removal</Link>
-                <div className="pl-10 pr-4 py-1 space-y-1 bg-[#F8FAFC] rounded-lg border-l-2 border-[#D62828]/40 my-1">
-                  <Link to="/services/removal/house-removals-east-sussex" onClick={() => setIsMenuOpen(false)} className="flex items-center gap-2 py-1.5 text-sm font-medium text-[#4B5563] hover:text-[#D62828]">
-                    <span className="w-1.5 h-1.5 rounded-full bg-[#D62828] shrink-0" />
-                    <span>House Removals</span>
-                  </Link>
-                  <Link to="/services/removal/office-removals-east-sussex" onClick={() => setIsMenuOpen(false)} className="flex items-center gap-2 py-1.5 text-sm font-medium text-[#4B5563] hover:text-[#D62828]">
-                    <span className="w-1.5 h-1.5 rounded-full bg-[#D62828] shrink-0" />
-                    <span>Office Removals</span>
-                  </Link>
-                  <Link to="/services/removal/furniture-removal-east-sussex" onClick={() => setIsMenuOpen(false)} className="flex items-center gap-2 py-1.5 text-sm font-medium text-[#4B5563] hover:text-[#D62828]">
-                    <span className="w-1.5 h-1.5 rounded-full bg-[#D62828] shrink-0" />
-                    <span>Furniture Removal</span>
-                  </Link>
-                </div>
-                <Link to="/services/storage" onClick={() => setIsMenuOpen(false)} className="block px-6 py-2.5 font-bold text-[#0E3A6D] hover:bg-[#F2F4FF] rounded-lg">Storage</Link>
-                <div className="pl-10 pr-4 py-1 space-y-1 bg-[#F8FAFC] rounded-lg border-l-2 border-[#D62828]/40 my-1">
-                  <Link to="/services/storage/removal-and-storage-east-sussex" onClick={() => setIsMenuOpen(false)} className="flex items-center gap-2 py-1.5 text-sm font-medium text-[#4B5563] hover:text-[#D62828]">
-                    <span className="w-1.5 h-1.5 rounded-full bg-[#D62828] shrink-0" />
-                    <span>Removal & Storage</span>
-                  </Link>
-                </div>
-                <Link to="/services/cleaning" onClick={() => setIsMenuOpen(false)} className="block px-6 py-3 text-[#6B7280] hover:bg-[#F2F4FF] rounded-lg">Cleaning</Link>
-                <Link to="/services/painting-decor" onClick={() => setIsMenuOpen(false)} className="block px-6 py-3 text-[#6B7280] hover:bg-[#F2F4FF] rounded-lg">Painting & Decor</Link>
-                <Link to="/services/marine-detailing" onClick={() => setIsMenuOpen(false)} className="block px-6 py-3 text-[#6B7280] hover:bg-[#F2F4FF] rounded-lg">Marine Detailing</Link>
-                <Link to="/services/aviation-detailing" onClick={() => setIsMenuOpen(false)} className="block px-6 py-3 text-[#6B7280] hover:bg-[#F2F4FF] rounded-lg">Aviation Detailing</Link>
-                <Link to="/services/waste-removal" onClick={() => setIsMenuOpen(false)} className="block px-6 py-3 text-[#6B7280] hover:bg-[#F2F4FF] rounded-lg">Waste Removal</Link>
+                <Link to="/services/clearance" onClick={() => setIsMenuOpen(false)} className="block px-6 py-2.5 text-[#6B7280] hover:bg-[#F2F4FF] hover:text-[#0E3A6D] rounded-lg">Clearance</Link>
+                <Link to="/services/removal" onClick={() => setIsMenuOpen(false)} className="block px-6 py-2.5 text-[#6B7280] hover:bg-[#F2F4FF] hover:text-[#0E3A6D] rounded-lg">Removal</Link>
+                <Link to="/services/storage" onClick={() => setIsMenuOpen(false)} className="block px-6 py-2.5 text-[#6B7280] hover:bg-[#F2F4FF] hover:text-[#0E3A6D] rounded-lg">Storage</Link>
+                <Link to="/services/cleaning" onClick={() => setIsMenuOpen(false)} className="block px-6 py-2.5 text-[#6B7280] hover:bg-[#F2F4FF] hover:text-[#0E3A6D] rounded-lg">Cleaning</Link>
+                <Link to="/services/painting-decor" onClick={() => setIsMenuOpen(false)} className="block px-6 py-2.5 text-[#6B7280] hover:bg-[#F2F4FF] hover:text-[#0E3A6D] rounded-lg">Painting & Decor</Link>
+                <Link to="/services/marine-detailing" onClick={() => setIsMenuOpen(false)} className="block px-6 py-2.5 text-[#6B7280] hover:bg-[#F2F4FF] hover:text-[#0E3A6D] rounded-lg">Marine Detailing</Link>
+                <Link to="/services/aviation-detailing" onClick={() => setIsMenuOpen(false)} className="block px-6 py-2.5 text-[#6B7280] hover:bg-[#F2F4FF] hover:text-[#0E3A6D] rounded-lg">Aviation Detailing</Link>
+                <Link to="/services/waste-removal" onClick={() => setIsMenuOpen(false)} className="block px-6 py-2.5 text-[#6B7280] hover:bg-[#F2F4FF] hover:text-[#0E3A6D] rounded-lg">Waste Removal</Link>
               </div>
             )}
 
@@ -342,6 +300,60 @@ export const Navbar = () => {
                     </a>
                   )
                 )}
+              </div>
+            )}
+
+            {/* East Sussex accordion */}
+            <button
+              onClick={() => setIsMobileEastSussexOpen(!isMobileEastSussexOpen)}
+              className="flex items-center justify-between w-full px-3 py-3 font-bold text-[#1C1C1C] border-b border-[#0E3A6D]/10"
+            >
+              East Sussex
+              <ChevronDown size={16} className={`transition-transform ${isMobileEastSussexOpen ? 'rotate-180' : ''}`} />
+            </button>
+            {isMobileEastSussexOpen && (
+              <div className="space-y-1 py-1">
+                <Link 
+                  to="/areas/east-sussex" 
+                  onClick={() => setIsMenuOpen(false)} 
+                  className="block px-6 py-2.5 font-bold text-[#D62828] hover:bg-[#F2F4FF] rounded-lg"
+                >
+                  East Sussex Overview
+                </Link>
+                <div className="pl-6 pr-4 py-1 space-y-1">
+                  <Link to="/services/clearance/house-clearance-east-sussex" onClick={() => setIsMenuOpen(false)} className="flex items-center gap-2.5 py-2 text-sm font-medium text-[#4B5563] hover:text-[#D62828]">
+                    <span className="w-1.5 h-1.5 rounded-full bg-[#D62828] shrink-0" />
+                    <span>House Clearance</span>
+                  </Link>
+                  <Link to="/services/clearance/probate-clearance-east-sussex" onClick={() => setIsMenuOpen(false)} className="flex items-center gap-2.5 py-2 text-sm font-medium text-[#4B5563] hover:text-[#D62828]">
+                    <span className="w-1.5 h-1.5 rounded-full bg-[#D62828] shrink-0" />
+                    <span>Probate Clearance</span>
+                  </Link>
+                  <Link to="/services/clearance/office-clearance-east-sussex" onClick={() => setIsMenuOpen(false)} className="flex items-center gap-2.5 py-2 text-sm font-medium text-[#4B5563] hover:text-[#D62828]">
+                    <span className="w-1.5 h-1.5 rounded-full bg-[#D62828] shrink-0" />
+                    <span>Office Clearance</span>
+                  </Link>
+                  <Link to="/services/clearance/rubbish-clearance-east-sussex" onClick={() => setIsMenuOpen(false)} className="flex items-center gap-2.5 py-2 text-sm font-medium text-[#4B5563] hover:text-[#D62828]">
+                    <span className="w-1.5 h-1.5 rounded-full bg-[#D62828] shrink-0" />
+                    <span>Rubbish Clearance</span>
+                  </Link>
+                  <Link to="/services/removal/house-removals-east-sussex" onClick={() => setIsMenuOpen(false)} className="flex items-center gap-2.5 py-2 text-sm font-medium text-[#4B5563] hover:text-[#D62828]">
+                    <span className="w-1.5 h-1.5 rounded-full bg-[#D62828] shrink-0" />
+                    <span>House Removals</span>
+                  </Link>
+                  <Link to="/services/removal/office-removals-east-sussex" onClick={() => setIsMenuOpen(false)} className="flex items-center gap-2.5 py-2 text-sm font-medium text-[#4B5563] hover:text-[#D62828]">
+                    <span className="w-1.5 h-1.5 rounded-full bg-[#D62828] shrink-0" />
+                    <span>Office Removals</span>
+                  </Link>
+                  <Link to="/services/removal/furniture-removal-east-sussex" onClick={() => setIsMenuOpen(false)} className="flex items-center gap-2.5 py-2 text-sm font-medium text-[#4B5563] hover:text-[#D62828]">
+                    <span className="w-1.5 h-1.5 rounded-full bg-[#D62828] shrink-0" />
+                    <span>Furniture Removal</span>
+                  </Link>
+                  <Link to="/services/storage/removal-and-storage-east-sussex" onClick={() => setIsMenuOpen(false)} className="flex items-center gap-2.5 py-2 text-sm font-medium text-[#4B5563] hover:text-[#D62828]">
+                    <span className="w-1.5 h-1.5 rounded-full bg-[#D62828] shrink-0" />
+                    <span>Removal & Storage</span>
+                  </Link>
+                </div>
               </div>
             )}
 
