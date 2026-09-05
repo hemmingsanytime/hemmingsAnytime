@@ -1,7 +1,7 @@
 import { Link } from 'react-router';
 import logo from "@/assets/logo.png";
 import footerBgImage from "@/assets/single-storage-image.avif";
-import { Phone, Mail, Clock } from 'lucide-react';
+import { Phone, Mail, Clock, MapPin } from 'lucide-react';
 
 export const Footer = () => {
 
@@ -227,6 +227,17 @@ export const Footer = () => {
                   <a href="mailto:hemmingsanytime@gmail.com" className="text-base text-white font-semibold hover:text-[#F4C430] transition-colors break-all">
                     hemmingsanytime@gmail.com
                   </a>
+                </div>
+              </li>
+              <li className="flex items-start gap-3">
+                <div className="w-9 h-9 rounded-lg bg-white/10 flex items-center justify-center flex-shrink-0 mt-0.5">
+                  <MapPin size={16} className="text-[#F4C430]" />
+                </div>
+                <div>
+                  <p className="text-sm text-gray-300/80 mb-0.5">Address</p>
+                  <p className="text-base text-white font-semibold leading-snug">
+                    4 Leaf Hall Rd, Eastbourne BN22 7NH, United Kingdom
+                  </p>
                 </div>
               </li>
               <li className="flex items-start gap-3">
