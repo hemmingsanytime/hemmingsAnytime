@@ -3,7 +3,7 @@ import { Link } from 'react-router';
 import {
   Truck, ShieldCheck, Clock, MapPin, Phone, Mail, ChevronDown, ChevronUp,
   ArrowRight, FileText, CheckCircle2, Star, Scale, HelpCircle, Package,
-  Trash2, Shield, Info, Sparkles, UserCheck, AlertCircle, RefreshCw, Briefcase, DollarSign, Box, Tag
+  Trash2, Shield, Info, Sparkles, Building2, UserCheck, AlertCircle, RefreshCw, Briefcase, DollarSign, Box, Tag
 } from 'lucide-react';
 import { ImageWithFallback } from '@/app/components/figma/ImageWithFallback';
 import { ServicePageHero } from '@/app/components/service-page/ServicePageHero';
