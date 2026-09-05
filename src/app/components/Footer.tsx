@@ -249,6 +249,30 @@ export const Footer = () => {
                   <p className="text-base text-white font-semibold">24/7 — After-Hours Available</p>
                 </div>
               </li>
+              <li className="pt-2">
+                <div className="rounded-xl overflow-hidden border border-white/20 shadow-md bg-white/5">
+                  <iframe
+                    title="Hemmings Anytime Location Map"
+                    src="https://maps.google.com/maps?q=4+Leaf+Hall+Rd,+Eastbourne+BN22+7NH,+United+Kingdom&t=&z=14&ie=UTF8&iwloc=&output=embed"
+                    width="100%"
+                    height="130"
+                    style={{ border: 0 }}
+                    allowFullScreen={false}
+                    loading="lazy"
+                    referrerPolicy="no-referrer-when-downgrade"
+                    className="w-full block"
+                  />
+                  <a
+                    href="https://maps.app.goo.gl/y5jMYwyeddAaZ2CJ8"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex items-center justify-between px-3 py-1.5 bg-black/40 hover:bg-[#D62828] text-xs text-white font-semibold transition-colors"
+                  >
+                    <span>View on Google Maps</span>
+                    <span>↗</span>
+                  </a>
+                </div>
+              </li>
             </ul>
           </div>
         </div>
